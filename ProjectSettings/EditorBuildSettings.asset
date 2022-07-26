@@ -8,3 +8,4 @@ EditorBuildSettings:
   m_configObjects:
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: c21c5b6c5d8eaca4a8ba523d423eee28, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: eae9e353267de6c40b5f5543076b6c24, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: d4306b71499472b49928b98d80c61b6f, type: 2}
