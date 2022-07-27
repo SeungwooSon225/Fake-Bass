@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public Animator GuitaristAnimator;
 
     public bool IsGameEnd = false;
+    public bool IsGamePlaying = false;
     private int isGuitarPlayingHash;
 
     private static GameManager _instance;
@@ -123,6 +124,7 @@ public class GameManager : MonoBehaviour
                 isKeyDown = true;
 
                 videoManager.Video.Play();
+                IsGamePlaying = true;
 
                 /* =========================================
                  * 템포 조절 인터액션
@@ -143,13 +145,15 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
 
         // 비디오가 끝나면 다음 단계로 넘어간다.
-        //while (videoManager.Video.isPlaying)
-        while(MidiFilePlayer.MPTK_IsPlaying)
+        while (videoManager.Video.isPlaying)
+        //while(MidiFilePlayer.MPTK_IsPlaying)
         {
             yield return null;
         }
 
         Debug.Log("Round Playing Done");
+        IsGamePlaying = false;
+
         yield return new WaitForSeconds(1.0f);
     }
 
