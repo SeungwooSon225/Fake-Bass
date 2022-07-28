@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public NodToTempo NodToTempo;
     public Animator GuitaristAnimator;
 
+    public GameMode CurrentGameMode;
     public bool IsGameEnd = false;
     public bool IsGamePlaying = false;
     private int isGuitarPlayingHash;
@@ -18,6 +19,13 @@ public class GameManager : MonoBehaviour
     
     [SerializeField]
     private VideoManager videoManager;
+
+
+    public enum GameMode
+    {
+        Basic,
+        FakePlay
+    }
 
 
     public static GameManager Instance
@@ -145,7 +153,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
 
         // 비디오가 끝나면 다음 단계로 넘어간다.
-        while (videoManager.Video.isPlaying)
+        while (videoManager.Video.time < videoManager.Video.length)
         //while(MidiFilePlayer.MPTK_IsPlaying)
         {
             yield return null;

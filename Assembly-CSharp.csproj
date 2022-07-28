@@ -60,11 +60,13 @@
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\NoteOnEvent.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeDemos\Script\ExtendedFlycam.cs" />
     <Compile Include="Assets\AssetStore\RealisticEyeMovements\Scripts\Internal\HeadComponent.cs" />
+    <Compile Include="Assets\Scripts\NoteInfo.cs" />
     <Compile Include="Assets\Scripts\NodToTempo.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeDemos\Script\RotateObject.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeDemos\SourceCatchMusic\Script\Collide.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\Water\Water\Scripts\Displace.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\MidiEventComparer.cs" />
+    <Compile Include="Assets\Scripts\Note.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKSoundFont\SFFile.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\SmpteOffsetEvent.cs" />
     <Compile Include="Assets\AssetStore\RealisticEyeMovements\Scripts\Internal\EarlyUpdateCallback.cs" />
@@ -81,6 +83,7 @@
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeDemos\Script\GUISelectSoundFont.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\FluidSynth\fluid_midi.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\NoteEvent.cs" />
+    <Compile Include="Assets\Scripts\NoteManager.cs" />
     <Compile Include="Assets\AssetStore\RealisticEyeMovements\Scripts\Legacy\EyeAndHeadAnimatorForExport.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKSoundFont\HiInstrument.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\FluidSynth\fluid_gen_info.cs" />
@@ -118,6 +121,7 @@
     <Compile Include="Assets\AssetStore\RealisticEyeMovements\Scripts\Internal\Utils.cs" />
     <Compile Include="Assets\AssetStore\RealisticEyeMovements\Scripts\Internal\EyelidPositionBlendshape.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\FluidSynth\fluid_global.cs" />
+    <Compile Include="Assets\Scripts\NotePoolManager.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\FluidSynth\fluid_voice.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeDemos\Script\MainMenu.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeDemos\Script\ExternalComponents\iTween.cs" />
@@ -134,6 +138,7 @@
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKUtil\CustomStyle.cs" />
     <Compile Include="Assets\Scripts\StarePlayer.cs" />
     <Compile Include="Assets\AssetStore\RealisticEyeMovements\Scripts\Internal\ControlDataForSerialization.cs" />
+    <Compile Include="Assets\Scripts\HitBar.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKUtil\BuilderInfo.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\TrackSequenceNumberEvent.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKUtil\PopupListItem.cs" />
@@ -145,6 +150,7 @@
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKMidi\MidiLoad.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\KeySignatureEvent.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\MetaEvent.cs" />
+    <Compile Include="Assets\Scripts\StartPoint.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeDemos\Script\TestMidiStream.cs" />
     <Compile Include="Assets\AssetStore\RealisticEyeMovements\Scripts\Internal\SerializableVector3.cs" />
     <Compile Include="Assets\AssetStore\RealisticEyeMovements\Scripts\Internal\EyeRotationLimiter.cs" />
@@ -169,6 +175,7 @@
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKSoundFont\HiZone.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\SysexEvent.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\Water\Water\Scripts\WaterBase.cs" />
+    <Compile Include="Assets\Scripts\NoteInfoQueueManager.cs" />
     <Compile Include="Assets\AssetStore\RealisticEyeMovements\Scripts\Internal\EyelidRotationLimiter.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\Water\Water\Scripts\MeshContainer.cs" />
     <Compile Include="Assets\Scripts\StareAgent.cs" />
@@ -195,13 +202,6 @@
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKGameObject\MidiSynth.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKSoundFont\HiMod.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeMVP\TheSimplestMidiLoader.cs" />
-    <Compile Include="Assets\Scripts\StartPoint.cs" />
-    <Compile Include="Assets\Scripts\NoteManager.cs" />
-    <Compile Include="Assets\Scripts\NoteInfoQueueManager.cs" />
-    <Compile Include="Assets\Scripts\NoteInfo.cs" />
-    <Compile Include="Assets\Scripts\NotePoolManager.cs" />
-    <Compile Include="Assets\Scripts\Note.cs" />
-    <Compile Include="Assets\Scripts\HitBar.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AssetStore\MidiPlayer\Demo\Builder\IMPORTANT  NOTICE.txt" />
