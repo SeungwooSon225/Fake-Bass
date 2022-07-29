@@ -116,6 +116,7 @@
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\MidiEventCollection.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKSoundFont\HiPreset.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\MetaEventType.cs" />
+    <Compile Include="Assets\Scripts\VRControllerInputManager.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\MergeSort.cs" />
     <Compile Include="Assets\AssetStore\Melanchall\DryWetMIDI\Demo\DemoScript.cs" />
     <Compile Include="Assets\AssetStore\RealisticEyeMovements\Scripts\Internal\Utils.cs" />
@@ -202,7 +203,7 @@
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKGameObject\MidiSynth.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKSoundFont\HiMod.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeMVP\TheSimplestMidiLoader.cs" />
-    <Compile Include="Assets\Scripts\VRControllerInputManager.cs" />
+    <Compile Include="Assets\Scripts\GuitarInteractionManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AssetStore\MidiPlayer\Demo\Builder\IMPORTANT  NOTICE.txt" />
