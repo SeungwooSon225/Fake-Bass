@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public Animator GuitaristAnimator;
 
     public GameMode CurrentGameMode;
+    public GameLevel CurrentGameLevel;
+
     public bool IsGameEnd = false;
     public bool IsGamePlaying = false;
     private int isGuitarPlayingHash;
@@ -26,6 +28,16 @@ public class GameManager : MonoBehaviour
         Basic,
         FakePlay
     }
+
+
+    public enum GameLevel
+    {
+        None,
+        Timing,
+        Hand,
+        Both
+    }
+
 
 
     public static GameManager Instance
