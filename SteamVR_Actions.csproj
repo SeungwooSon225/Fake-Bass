@@ -63,6 +63,7 @@
     <Compile Include="Assets\AssetStore\VR\SteamVR_Input\SteamVR_Input_Initialization.cs" />
     <Compile Include="Assets\AssetStore\VR\SteamVR_Input\ActionSetClasses\SteamVR_Input_ActionSet_buggy.cs" />
     <Compile Include="Assets\AssetStore\VR\SteamVR_Input\SteamVR_Input_Actions.cs" />
+    <Compile Include="Assets\AssetStore\VR\SteamVR_Input\ActionSetClasses\SteamVR_Input_ActionSet_FakeBass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AssetStore\VR\SteamVR_Input\SteamVR_Actions.asmdef" />
