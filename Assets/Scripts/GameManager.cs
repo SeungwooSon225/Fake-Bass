@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     public ControlTempo ControlTempo;
     public NodToTempo NodToTempo;
     public Animator GuitaristAnimator;
+    public NotePoolManager NotePoolManager;
+    public MusicDataReader MusicDataReader;
+    public HitBar HitBar;
 
     public GameMode CurrentGameMode;
     public GameLevel CurrentGameLevel;
@@ -37,7 +40,6 @@ public class GameManager : MonoBehaviour
         Hand,
         Both
     }
-
 
 
     public static GameManager Instance
@@ -118,12 +120,17 @@ public class GameManager : MonoBehaviour
      */
     private IEnumerator RoundSetting()
     {
+        yield return new WaitForSeconds(1.0f);
         Debug.Log("Round Setting...");
         /* To do
          * 게임 플레이를 할 음악을 고르는 단계가 추가될 예정
          */
 
+        NotePoolManager.MakeNoteQueue(MusicDataReader.AdjustedNoteInfoArray);
+        NotePoolManager.InitializeNotes();
+        HitBar.InitializeNoteInfo();
         Debug.Log("Round Setting Done");
+
         yield return new WaitForSeconds(0.5f); 
     }
 
