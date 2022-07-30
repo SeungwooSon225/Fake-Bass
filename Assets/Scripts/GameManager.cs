@@ -157,9 +157,9 @@ public class GameManager : MonoBehaviour
                  * 템포 조절 인터액션
                  */
                 //MidiFilePlayer.MPTK_RePlay();
-                //NodToTempo.isStart = true;
-                //ControlTempo.TargetTempo = (float)MidiFilePlayer.MPTK_Tempo;
-                //NodToTempo.GlobalTempo = (float)MidiFilePlayer.MPTK_Tempo;
+                NodToTempo.isStart = true;
+                ControlTempo.TargetTempo = MusicDataReader.MusicData.Tempo;
+                NodToTempo.GlobalTempo = MusicDataReader.MusicData.Tempo;
                 // =========================================
 
                 GuitaristAnimator.SetBool(isGuitarPlayingHash, true);

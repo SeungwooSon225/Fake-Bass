@@ -7,7 +7,7 @@ public class StarePlayer : MonoBehaviour
     public RealisticEyeMovements.LookTargetController LookTargetController;
 
     [SerializeField]
-    private float animationStep = 10;
+    //private float animationStep = 10;
 
 
     /// <summary>

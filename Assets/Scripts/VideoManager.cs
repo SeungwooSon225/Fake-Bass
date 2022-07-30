@@ -10,14 +10,14 @@ public class VideoManager : MonoBehaviour
     public float VideoSpeed = 1.0f;
 
 
-    public void ChangeVideoSpeed()
+    public void ChangeVideoSpeed(float speed)
     {
-        Video.playbackSpeed = VideoSpeed;
+        Video.playbackSpeed = speed;
     }
 
 
-    private void Update()
-    {
-        Video.playbackSpeed = VideoSpeed;
-    }
+    //private void Update()
+    //{
+    //    Video.playbackSpeed = VideoSpeed;
+    //}
 }

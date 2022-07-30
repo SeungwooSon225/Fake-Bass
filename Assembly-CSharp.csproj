@@ -206,7 +206,6 @@
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeMVP\TheSimplestMidiLoader.cs" />
     <Compile Include="Assets\Scripts\MusicAnalyzing\MusicDataReader.cs" />
     <Compile Include="Assets\Scripts\MusicAnalyzing\MusicData.cs" />
-    <Compile Include="Assets\Scripts\MusicAnalyzing\Chord.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AssetStore\MidiPlayer\Demo\Builder\IMPORTANT  NOTICE.txt" />

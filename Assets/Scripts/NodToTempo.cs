@@ -5,7 +5,9 @@ using UnityEngine;
 public class NodToTempo : MonoBehaviour
 {
     public RealisticEyeMovements.EyeAndHeadAnimator EyeAndHeadAnimator;
-    public MidiPlayerTK.MidiFilePlayer MidiFilePlayer;
+    public MusicDataReader MusicDataReader;
+    public VideoManager VideoManager;
+    //public MidiPlayerTK.MidiFilePlayer MidiFilePlayer;
     public Animator GuitaristAnimator;
     public ControlTempo ControlTempo;
 
@@ -34,13 +36,15 @@ public class NodToTempo : MonoBehaviour
     void Update()
     {
         if (!ControlTempo.IsTempoAdjustable || !GuitaristAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayingGuitar")) return;
-
+        Debug.Log("2sss");
         float animationState = GuitaristAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime;
         animationState -= (int)animationState;
 
         if ((animationState > 0.95f && animationState < 1.0f) || (animationState > 0.45f && animationState < 0.5f))
         {
             if (!isTempo) return;
+
+            Debug.Log("hihi");
 
             isTempo = false;
 
@@ -53,9 +57,10 @@ public class NodToTempo : MonoBehaviour
                 GlobalTempo = (GlobalTempo > ControlTempo.TargetTempo) ? GlobalTempo - minimumTempoChange : GlobalTempo + minimumTempoChange;
             }
 
-            MidiFilePlayer.MPTK_Speed = GlobalTempo / (float)MidiFilePlayer.MPTK_Tempo;
+            //VideoManager.Video.playbackSpeed = GlobalTempo / MusicDataReader.MusicData.Tempo;
+            VideoManager.ChangeVideoSpeed(GlobalTempo / MusicDataReader.MusicData.Tempo);
 
-            GuitaristAnimator.speed = ((float)MidiFilePlayer.MPTK_Tempo * MidiFilePlayer.MPTK_Speed) / 120f;
+            GuitaristAnimator.speed = (MusicDataReader.MusicData.Tempo * VideoManager.Video.playbackSpeed) / 120f;
         }
         else
         {

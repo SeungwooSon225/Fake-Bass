@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ControlTempo : MonoBehaviour
 {
-    public MidiPlayerTK.MidiFilePlayer MidiFilePlayer;
+    //public MidiPlayerTK.MidiFilePlayer MidiFilePlayer;
+    public MusicDataReader MusicDataReader;
     public float TargetTempo;
     public bool IsTempoAdjustable = false;
 
@@ -24,9 +25,9 @@ public class ControlTempo : MonoBehaviour
     void Update()
     {
         if (!IsTempoAdjustable) return;
-
+        Debug.Log("aaa1");
         float adjustedAngle;
-        float originalTempo = (float)MidiFilePlayer.MPTK_Tempo;
+        float originalTempo = MusicDataReader.MusicData.Tempo;
 
         if (gameObject.transform.eulerAngles.x > 200f)
         {
@@ -50,7 +51,7 @@ public class ControlTempo : MonoBehaviour
 
                 int temporaryTempo = (int)(60 / noddingTerm);
                 
-                Debug.Log(temporaryTempo);
+                //Debug.Log(temporaryTempo);
 
                 if (temporaryTempo > 30) TargetTempo = temporaryTempo;
 
