@@ -95,6 +95,7 @@
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKUtil\Routine.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\ChannelAfterTouchEvent.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKGameObject\MidiPlayerGlobal.cs" />
+    <Compile Include="Assets\Scripts\GuitarInteractionManager.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKGameObject\MPTKListItem.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKGameObject\MidiFileLoader.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeDemos\Script\TestMidiFilePlayerMulti\MovePoint.cs" />
@@ -203,7 +204,9 @@
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKGameObject\MidiSynth.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKSoundFont\HiMod.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeMVP\TheSimplestMidiLoader.cs" />
-    <Compile Include="Assets\Scripts\GuitarInteractionManager.cs" />
+    <Compile Include="Assets\Scripts\MusicAnalyzing\MusicDataReader.cs" />
+    <Compile Include="Assets\Scripts\MusicAnalyzing\MusicData.cs" />
+    <Compile Include="Assets\Scripts\MusicAnalyzing\Chord.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AssetStore\MidiPlayer\Demo\Builder\IMPORTANT  NOTICE.txt" />
