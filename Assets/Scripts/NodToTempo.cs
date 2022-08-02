@@ -36,15 +36,12 @@ public class NodToTempo : MonoBehaviour
     void Update()
     {
         if (!ControlTempo.IsTempoAdjustable || !GuitaristAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayingGuitar")) return;
-        Debug.Log("2sss");
         float animationState = GuitaristAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime;
         animationState -= (int)animationState;
 
         if ((animationState > 0.95f && animationState < 1.0f) || (animationState > 0.45f && animationState < 0.5f))
         {
             if (!isTempo) return;
-
-            Debug.Log("hihi");
 
             isTempo = false;
 

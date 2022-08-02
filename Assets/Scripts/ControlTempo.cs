@@ -25,7 +25,6 @@ public class ControlTempo : MonoBehaviour
     void Update()
     {
         if (!IsTempoAdjustable) return;
-        Debug.Log("aaa1");
         float adjustedAngle;
         float originalTempo = MusicDataReader.MusicData.Tempo;
 
