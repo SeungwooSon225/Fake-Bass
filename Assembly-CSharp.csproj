@@ -209,9 +209,16 @@
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKGameObject\MidiSynth.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKSoundFont\HiMod.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeMVP\TheSimplestMidiLoader.cs" />
+    <Compile Include="Assets\Daz3D\Scripts\Utilities.cs" />
+    <Compile Include="Assets\Daz3D\Scripts\CollapsedVertexArray.cs" />
+    <Compile Include="Assets\Daz3D\Scripts\ClothCollisionAssigner.cs" />
+    <Compile Include="Assets\Daz3D\Scripts\Daz3DInstance.cs" />
+    <Compile Include="Assets\Daz3D\Scripts\ClothTools.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Daz3D\Shaders\Invisible.shader" />
     <None Include="Assets\AssetStore\MidiPlayer\Demo\Builder\IMPORTANT  NOTICE.txt" />
+    <None Include="Assets\Daz3D\Shaders\uDTU\GetLightDirectionURP.hlsl" />
     <None Include="Assets\AssetStore\MidiPlayer\Version changes full.txt" />
     <None Include="Assets\AssetStore\MidiPlayer\Resources\MidiSet.txt" />
     <None Include="Assets\AssetStore\MidiPlayer\Demo\Water\Water4\Shaders\WaterInclude.cginc" />
@@ -234,8 +241,10 @@
     <None Include="Assets\AssetStore\RealisticEyeMovements\Presets\DAZ_Studio\Readme_Blendshapes.txt" />
     <None Include="Assets\AssetStore\MidiPlayer\Scripts\FluidSynth\_fluisynth_AUTHORS.txt" />
     <None Include="Assets\AssetStore\RealisticEyeMovements\Changelog.txt" />
+    <None Include="Assets\Daz3D\Shaders\Helpers\GetLightDirection.hlsl" />
     <None Include="Assets\AssetStore\Melanchall\DryWetMIDI\README.txt" />
     <None Include="Assets\AssetStore\MidiPlayer\Resources\SoundfontsDB\AltoSax\AltoSax.txt" />
+    <None Include="Assets\Daz3D\Resources\ReadMe.txt" />
     <None Include="Assets\MidiPlayer\Resources\MidiSet.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -965,6 +974,10 @@
     <ProjectReference Include="SteamVR_Actions.csproj">
       <Project>{CEA8004A-60DD-6C55-EA1F-5F31E717AC25}</Project>
       <Name>SteamVR_Actions</Name>
+    </ProjectReference>
+    <ProjectReference Include="SimpleJSON.csproj">
+      <Project>{0641E5DF-B2E8-16B1-D725-80980D3A700C}</Project>
+      <Name>SimpleJSON</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

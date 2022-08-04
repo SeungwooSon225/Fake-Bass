@@ -178,7 +178,7 @@ AnimatorController:
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
-    m_DefaultBool: 0
+    m_DefaultBool: 1
     m_Controller: {fileID: 0}
   - m_Name: isNodding
     m_Type: 4
@@ -363,7 +363,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 0ce83cb9588e06b4f995d8eacf3bb78e, type: 2}
+  m_Motion: {fileID: 7400000, guid: 1e61ac93561586b49a2cad15965599c2, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
