@@ -5,6 +5,10 @@ using UnityEngine;
 public class StarePlayer : MonoBehaviour
 {
     public RealisticEyeMovements.LookTargetController LookTargetController;
+    public GameObject NoteLane;
+    public GameManager GameManager;
+
+    private GameManager.GameLevel gameLevel;
 
     [SerializeField]
     //private float animationStep = 10;
@@ -16,6 +20,10 @@ public class StarePlayer : MonoBehaviour
     public void Stare()
     {
         LookTargetController.lookAtPlayerRatio = 1;
+
+        NoteLane.transform.localPosition = NoteLane.transform.localPosition - new Vector3(0, 10f, 0);
+        gameLevel = GameManager.CurrentGameLevel;
+        GameManager.CurrentGameLevel = GameManager.GameLevel.None;
     }
 
     //IEnumerator Staring()
@@ -39,6 +47,9 @@ public class StarePlayer : MonoBehaviour
     public void Return()
     {
         LookTargetController.lookAtPlayerRatio = 0;
+
+        NoteLane.transform.localPosition = NoteLane.transform.localPosition + new Vector3(0, 10f, 0);
+        GameManager.CurrentGameLevel = gameLevel;
     }
 
     //IEnumerator Returning()
