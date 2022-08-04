@@ -159,6 +159,7 @@ public class GameManager : MonoBehaviour
                 //MidiFilePlayer.MPTK_RePlay();
                 NodToTempo.isStart = true;
                 ControlTempo.TargetTempo = MusicDataReader.MusicData.Tempo;
+                Debug.Log("C: "+ ControlTempo.TargetTempo);
                 NodToTempo.GlobalTempo = MusicDataReader.MusicData.Tempo;
                 // =========================================
 

@@ -1,1 +1,17 @@
 Temp/UnityLockfile
+
+Library/ArtifactDB
+
+/Library/
+
+/[Tt]emp/
+
+/[Oo]bj/
+
+Build/
+
+/[Bb]uilds/
+
+/[Ll]ogs/
+
+/[Mm]emoryCaptures/

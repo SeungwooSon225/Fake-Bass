@@ -68,6 +68,7 @@
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\MidiEventComparer.cs" />
     <Compile Include="Assets\Scripts\Note.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKSoundFont\SFFile.cs" />
+    <Compile Include="Assets\Scripts\MusicAnalyzing\MusicDataReader.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\SmpteOffsetEvent.cs" />
     <Compile Include="Assets\AssetStore\RealisticEyeMovements\Scripts\Internal\EarlyUpdateCallback.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\Water\Water\Scripts\PlanarReflection.cs" />
@@ -102,6 +103,7 @@
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\FluidSynth\fluid_dsp_float.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\TempoEvent.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\MidiFile.cs" />
+    <Compile Include="Assets\Scripts\SoundManager\SoundManager.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\Water\Water\Scripts\GerstnerDisplace.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\ControlChangeEvent.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKMidi\MidiSet.cs" />
@@ -119,6 +121,7 @@
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\MetaEventType.cs" />
     <Compile Include="Assets\Scripts\VRControllerInputManager.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\MergeSort.cs" />
+    <Compile Include="Assets\Scripts\MusicAnalyzing\MusicData.cs" />
     <Compile Include="Assets\AssetStore\Melanchall\DryWetMIDI\Demo\DemoScript.cs" />
     <Compile Include="Assets\AssetStore\RealisticEyeMovements\Scripts\Internal\Utils.cs" />
     <Compile Include="Assets\AssetStore\RealisticEyeMovements\Scripts\Internal\EyelidPositionBlendshape.cs" />
@@ -128,6 +131,7 @@
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeDemos\Script\MainMenu.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeDemos\Script\ExternalComponents\iTween.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKSoundFont\HiSample.cs" />
+    <Compile Include="Assets\Scripts\ParticleRippleScript.cs" />
     <Compile Include="Assets\AssetStore\RealisticEyeMovements\Scripts\Internal\DestroyNotifier.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeMVP\TheSimplestMidiPlayer.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\FluidSynth\fluid_rev_v2.cs" />
@@ -190,6 +194,7 @@
     <Compile Include="Assets\AssetStore\RealisticEyeMovements\Scripts\Internal\VeryLateUpdateCallback.cs" />
     <Compile Include="Assets\AssetStore\RealisticEyeMovements\Scripts\EyeAndHeadAnimator.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKMidi\TrackMidiEvent.cs" />
+    <Compile Include="Assets\roopsound.cs" />
     <Compile Include="Assets\Scripts\SynchronizeTempo.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\PitchWheelChangeEvent.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\SequencerSpecificEvent.cs" />
@@ -204,11 +209,6 @@
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKGameObject\MidiSynth.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKSoundFont\HiMod.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeMVP\TheSimplestMidiLoader.cs" />
-    <Compile Include="Assets\Scripts\MusicAnalyzing\MusicDataReader.cs" />
-    <Compile Include="Assets\Scripts\MusicAnalyzing\MusicData.cs" />
-    <Compile Include="Assets\Scripts\SoundManager\SoundManager.cs" />
-    <Compile Include="Assets\roopsound.cs" />
-    <Compile Include="Assets\Scripts\ParticleRippleScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AssetStore\MidiPlayer\Demo\Builder\IMPORTANT  NOTICE.txt" />

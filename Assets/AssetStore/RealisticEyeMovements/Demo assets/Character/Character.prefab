@@ -416,6 +416,8 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -427,6 +429,7 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -852,6 +855,8 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -863,6 +868,7 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2376,6 +2382,8 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2387,6 +2395,7 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2618,6 +2627,8 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2629,6 +2640,7 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2953,6 +2965,8 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2964,6 +2978,7 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -3253,6 +3268,7 @@ MonoBehaviour:
   maxLookTime: 10
   thirdPersonPlayerEyeCenter: {fileID: 0}
   keepTargetEvenWhenLost: 1
+  avoidLookingThroughPlayer: 0
   OnStartLookingAtPlayer:
     m_PersistentCalls:
       m_Calls: []
@@ -3340,42 +3356,70 @@ MonoBehaviour:
     isEyeBoneLookUpSet: 1
     isEyeBallLookDownSet: 0
     isEyeBoneLookDownSet: 1
+    isEyeBallLookLeftSet: 0
+    isEyeBoneLookLeftSet: 0
+    isEyeBallLookRightSet: 0
+    isEyeBoneLookRightSet: 0
     leftBoneEyeRotationLimiter:
       transform: {fileID: 4601254984872118939}
       defaultQ: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
       lookUpQ: {x: 0.000000059604616, y: -0.5596158, z: -0.00000011920925, w: 0.82875216}
       lookDownQ: {x: -0.000000059604623, y: -0.8099899, z: 0.000000029802305, w: 0.58644384}
-      maxUpAngle: 21.941538
+      lookLeftQ: {x: 0, y: 0, z: 0, w: 0}
+      lookRightQ: {x: 0, y: 0, z: 0, w: 0}
       maxDownAngle: 18.18988
+      maxLeftAngle: 30
+      maxRightAngle: 30
+      maxUpAngle: 21.941538
       isLookUpSet: 1
       isLookDownSet: 1
+      isLookLeftSet: 0
+      isLookRightSet: 0
     rightBoneEyeRotationLimiter:
       transform: {fileID: 4601254984247314814}
       defaultQ: {x: 1.5700926e-16, y: -0.7071068, z: 1.5700926e-16, w: 0.7071068}
       lookUpQ: {x: 0.000000059604616, y: -0.5596158, z: -0.00000011920925, w: 0.82875216}
       lookDownQ: {x: 0.00000014901157, y: -0.80998987, z: -0.000000089406946, w: 0.58644396}
-      maxUpAngle: 21.941538
+      lookLeftQ: {x: 0, y: 0, z: 0, w: 0}
+      lookRightQ: {x: 0, y: 0, z: 0, w: 0}
       maxDownAngle: 18.18988
+      maxLeftAngle: 30
+      maxRightAngle: 30
+      maxUpAngle: 21.941538
       isLookUpSet: 1
       isLookDownSet: 1
+      isLookLeftSet: 0
+      isLookRightSet: 0
     leftEyeballEyeRotationLimiter:
       transform: {fileID: 0}
       defaultQ: {x: 0, y: 0, z: 0, w: 0}
       lookUpQ: {x: 0, y: 0, z: 0, w: 0}
       lookDownQ: {x: 0, y: 0, z: 0, w: 0}
-      maxUpAngle: 0
+      lookLeftQ: {x: 0, y: 0, z: 0, w: 0}
+      lookRightQ: {x: 0, y: 0, z: 0, w: 0}
       maxDownAngle: 0
+      maxLeftAngle: 30
+      maxRightAngle: 30
+      maxUpAngle: 0
       isLookUpSet: 0
       isLookDownSet: 0
+      isLookLeftSet: 0
+      isLookRightSet: 0
     rightEyeballEyeRotationLimiter:
       transform: {fileID: 0}
       defaultQ: {x: 0, y: 0, z: 0, w: 0}
       lookUpQ: {x: 0, y: 0, z: 0, w: 0}
       lookDownQ: {x: 0, y: 0, z: 0, w: 0}
-      maxUpAngle: 0
+      lookLeftQ: {x: 0, y: 0, z: 0, w: 0}
+      lookRightQ: {x: 0, y: 0, z: 0, w: 0}
       maxDownAngle: 0
+      maxLeftAngle: 30
+      maxRightAngle: 30
+      maxUpAngle: 0
       isLookUpSet: 0
       isLookDownSet: 0
+      isLookLeftSet: 0
+      isLookRightSet: 0
     eyelidControl: 1
     eyelidBoneMode: 0
     upperEyeLidLeft: {fileID: 0}
@@ -3542,18 +3586,20 @@ MonoBehaviour:
     blendshapesForBlinking: []
     blendshapesForLookingUp: []
     blendshapesForLookingDown: []
+    blendshapesForLookingLeft: []
+    blendshapesForLookingRight: []
     blendshapesConfigs: []
     isEyelidBlendshapeDefaultSet: 0
     isEyelidBlendshapeClosedSet: 0
     isEyelidBlendshapeLookUpSet: 0
     isEyelidBlendshapeLookDownSet: 0
+    isEyelidBlendshapeLookLeftSet: 0
+    isEyelidBlendshapeLookRightSet: 0
   eyelidsWeight: 1
   kMinNextBlinkTime: 3
   kMaxNextBlinkTime: 15
   blinkSpeed: 1
   eyelidsFollowEyesVertically: 1
-  maxEyeHorizAngle: 33
-  maxEyeHorizAngleTowardsNose: 33
   idleTargetHorizAngle: 12
   crossEyeCorrection: 1
   limitHeadAngle: 0

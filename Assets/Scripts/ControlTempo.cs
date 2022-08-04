@@ -8,6 +8,7 @@ public class ControlTempo : MonoBehaviour
     public MusicDataReader MusicDataReader;
     public float TargetTempo;
     public bool IsTempoAdjustable = false;
+    public float noddingTerm;
 
     private float previousAngle;
     private float previousAngularVelocity;
@@ -46,13 +47,20 @@ public class ControlTempo : MonoBehaviour
             if (Mathf.Abs(turnigPoint - previousTurningPoint) > 10f && angularVelocity > 0)
             {
                 float turningTime = Time.time;
-                float noddingTerm = turningTime - previousTime;
+                noddingTerm = turningTime - previousTime;
 
+                // Control tempo by tempo
                 int temporaryTempo = (int)(60 / noddingTerm);
-                
-                //Debug.Log(temporaryTempo);
 
-                if (temporaryTempo > 30) TargetTempo = temporaryTempo;
+                if (temporaryTempo > 30)
+                {
+                    Debug.Log("t: " + temporaryTempo);
+                    TargetTempo = temporaryTempo;
+                }
+
+                // Control tempo by beat
+
+
 
                 previousTime = Time.time;
             }
