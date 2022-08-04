@@ -48,7 +48,7 @@ public class HitBar : MonoBehaviour
 
         if (VRControllerInputManager.RightPressed() || Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(RippleEffect, this.gameObject.transform);
+            RippleEffect.Play();
 
             isHandMove = GuitarInteractionManager.CheckChordChange();
 

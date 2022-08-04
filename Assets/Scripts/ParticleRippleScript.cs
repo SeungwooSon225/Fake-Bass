@@ -8,7 +8,7 @@ public class ParticleRippleScript : MonoBehaviour
 
     void Start()
     {
-        Destroy(this.gameObject, TimeLeft);
+        
     }
 
     // Update is called once per frame
