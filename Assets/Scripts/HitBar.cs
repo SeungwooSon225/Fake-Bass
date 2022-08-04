@@ -10,6 +10,7 @@ public class HitBar : MonoBehaviour
     public VRControllerInputManager VRControllerInputManager;
     public GuitarInteractionManager GuitarInteractionManager;
     public SoundManager SoundManager;
+    public Animator GuitaristAnimator;
 
     public ParticleSystem RippleEffect;
 
@@ -27,6 +28,7 @@ public class HitBar : MonoBehaviour
     [SerializeField]
     private bool isHandMove = false;
     private bool isMissNote = false;
+    private float animationSpeed;
 
 
     public void InitializeNoteInfo()
@@ -68,6 +70,7 @@ public class HitBar : MonoBehaviour
                         if (VideoManager.Video.isPaused)
                         {
                             VideoManager.Video.Play();
+                            GuitaristAnimator.speed = animationSpeed;
                         }
                     }
 
@@ -101,6 +104,7 @@ public class HitBar : MonoBehaviour
                         if (VideoManager.Video.isPaused)
                         {
                             VideoManager.Video.Play();
+                            GuitaristAnimator.speed = animationSpeed;
                         }
                     }
 
@@ -122,6 +126,7 @@ public class HitBar : MonoBehaviour
                         if (VideoManager.Video.isPaused)
                         {
                             VideoManager.Video.Play();
+                            GuitaristAnimator.speed = animationSpeed;
                         }
                     }
                     break;
@@ -152,6 +157,7 @@ public class HitBar : MonoBehaviour
                         if (VideoManager.Video.isPaused)
                         {
                             VideoManager.Video.Play();
+                            GuitaristAnimator.speed = animationSpeed;
                         }
                     }
 
@@ -189,6 +195,8 @@ public class HitBar : MonoBehaviour
             else if (GameManager.CurrentGameMode == GameManager.GameMode.FakePlay)
             { 
                 VideoManager.Video.Pause();
+                animationSpeed = GuitaristAnimator.speed;
+                GuitaristAnimator.speed = 0;
             }
         }
     }
