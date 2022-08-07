@@ -48,7 +48,8 @@ public class NotePoolManager : MonoBehaviour
                 ChangeNoteColor();
             }
 
-            Note.GetComponent<Renderer>().material.color = currentColor;
+            //Note.GetComponent<Renderer>().material.color = currentColor;
+            Note.GetComponent<Renderer>().material.SetColor("_EmissionColor", currentColor);
 
             previousPitch = noteInfo.pitch;
         }

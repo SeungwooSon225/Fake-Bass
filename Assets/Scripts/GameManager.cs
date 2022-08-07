@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public NotePoolManager NotePoolManager;
     public MusicDataReader MusicDataReader;
     public HitBar HitBar;
+    public VRControllerInputManager VRControllerInputManager;
 
     public GameMode CurrentGameMode;
     public GameLevel CurrentGameLevel;
@@ -146,7 +147,7 @@ public class GameManager : MonoBehaviour
         while (!isKeyDown)
         {
             // 키보드 입력이 있으면 플레이 시작
-            if (Input.anyKeyDown)
+            if (Input.anyKeyDown || VRControllerInputManager.RightPressed())
             {
                 isKeyDown = true;
 

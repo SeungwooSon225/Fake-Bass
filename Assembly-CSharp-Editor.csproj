@@ -57,18 +57,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\Editor\MessagesEditor.cs" />
+    <Compile Include="Assets\Daz3D\Scripts\Editor\DazJSONHelper.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\Editor\GetFullVersion.cs" />
+    <Compile Include="Assets\Daz3D\Scripts\Editor\ClothToolsEditor.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\Editor\DemoLoaderWindow.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\Editor\MidiCommonEditor.cs" />
+    <Compile Include="Assets\Daz3D\Scripts\Editor\Daz3DDTUImporter.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\Editor\MidiFilePlayerEditor.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\Editor\PopupListPatchs.cs" />
+    <Compile Include="Assets\Daz3D\Scripts\Editor\DazCoroutine.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\Editor\MidiStreamPlayerEditor.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\Editor\MidiFileLoaderEditor.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\Editor\TextArea.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\Editor\StopPlayingOnRecompile.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\Editor\MidiFileSetupWindow.cs" />
     <Compile Include="Assets\AssetStore\RealisticEyeMovements\Scripts\Editor\EyeAndHeadAnimatorEditor.cs" />
+    <Compile Include="Assets\Daz3D\Scripts\Editor\ClothCollisionAssignerEditor.cs" />
+    <Compile Include="Assets\Daz3D\Scripts\Editor\DTUConverter.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\Editor\SoundFontSetupWindow.cs" />
     <Compile Include="Assets\AssetStore\RealisticEyeMovements\Scripts\Editor\SelectMecanimHead.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\Editor\AboutMPTK.cs" />
@@ -77,15 +83,9 @@
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\Editor\ToolsEditor.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\Editor\NoErrorValidation.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\Editor\SelectMidiWindow.cs" />
-    <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\Editor\ScreenLoggerEditor\ScreenLoggerEditor.cs" />
-    <Compile Include="Assets\Daz3D\Scripts\Editor\ClothCollisionAssignerEditor.cs" />
     <Compile Include="Assets\Daz3D\Scripts\Editor\DetectRenderPipeline.cs" />
     <Compile Include="Assets\Daz3D\Scripts\Editor\Daz3DBridge.cs" />
-    <Compile Include="Assets\Daz3D\Scripts\Editor\Daz3DDTUImporter.cs" />
-    <Compile Include="Assets\Daz3D\Scripts\Editor\DazJSONHelper.cs" />
-    <Compile Include="Assets\Daz3D\Scripts\Editor\DTUConverter.cs" />
-    <Compile Include="Assets\Daz3D\Scripts\Editor\ClothToolsEditor.cs" />
-    <Compile Include="Assets\Daz3D\Scripts\Editor\DazCoroutine.cs" />
+    <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\Editor\ScreenLoggerEditor\ScreenLoggerEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -697,11 +697,11 @@
     <Reference Include="System.Xml.XPath.XDocument">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.TestRunner">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.TestRunner">
       <HintPath>Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TestRunner">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
@@ -712,11 +712,47 @@
     <Reference Include="Unity.XR.OpenVR">
       <HintPath>Library\ScriptAssemblies\Unity.XR.OpenVR.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Searcher.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InputSystem">
+      <HintPath>Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Rider.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ShaderGraph.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.Management">
+      <HintPath>Library\ScriptAssemblies\Unity.XR.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Animation.Rigging.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Animation.Rigging.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
@@ -736,38 +772,17 @@
     <Reference Include="Unity.Burst.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Searcher.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Subsystem.Registration">
       <HintPath>Library\ScriptAssemblies\Unity.Subsystem.Registration.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.InputSystem">
-      <HintPath>Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+    <Reference Include="Unity.PlasticSCM.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.OpenXR.Features.OculusQuestSupport">
       <HintPath>Library\ScriptAssemblies\Unity.XR.OpenXR.Features.OculusQuestSupport.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.OpenVR.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.XR.OpenVR.Editor.dll</HintPath>
@@ -777,9 +792,6 @@
     </Reference>
     <Reference Include="Unity.Mathematics">
       <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ShaderGraph.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst">
       <HintPath>Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
@@ -793,9 +805,6 @@
     <Reference Include="Unity.XR.OpenXR.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.XR.OpenXR.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
@@ -804,12 +813,6 @@
     </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
       <HintPath>Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.Management">
-      <HintPath>Library\ScriptAssemblies\Unity.XR.Management.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.OpenXR">
       <HintPath>Library\ScriptAssemblies\Unity.XR.OpenXR.dll</HintPath>
@@ -826,9 +829,6 @@
     <Reference Include="Unity.XR.OpenXR.Features.RuntimeDebugger.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.XR.OpenXR.Features.RuntimeDebugger.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Animation.Rigging.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Animation.Rigging.Editor.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
@@ -838,10 +838,6 @@
     <ProjectReference Include="SteamVR_Input_Editor.csproj">
       <Project>{D82AD749-45BD-C4DF-4CCF-0850E4B9D057}</Project>
       <Name>SteamVR_Input_Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="SteamVR.csproj">
-      <Project>{18D43913-9336-0C5F-C14C-97BCD44E2A43}</Project>
-      <Name>SteamVR</Name>
     </ProjectReference>
     <ProjectReference Include="SteamVR_Windows_EditorHelper.csproj">
       <Project>{F7E2547D-4E1E-427A-DBCF-CE9401C54C0B}</Project>
@@ -854,6 +850,10 @@
     <ProjectReference Include="SteamVR_Actions.csproj">
       <Project>{CEA8004A-60DD-6C55-EA1F-5F31E717AC25}</Project>
       <Name>SteamVR_Actions</Name>
+    </ProjectReference>
+    <ProjectReference Include="SteamVR.csproj">
+      <Project>{18D43913-9336-0C5F-C14C-97BCD44E2A43}</Project>
+      <Name>SteamVR</Name>
     </ProjectReference>
     <ProjectReference Include="SimpleJSON.csproj">
       <Project>{0641E5DF-B2E8-16B1-D725-80980D3A700C}</Project>
