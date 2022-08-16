@@ -82,7 +82,7 @@ public class HitBar : MonoBehaviour
                     {
                         // Make wrong sound
                         Debug.Log("Miss");
-                        SoundManager.Play(currentPitch);
+                        SoundManager.Play(currentPitch + 3);
                     }
                     // Pitch changed and hand move or pitch unchanged and hand not move, or miss previous note
                     else
@@ -139,7 +139,7 @@ public class HitBar : MonoBehaviour
                         {
                             // Make wrong sound
                             Debug.Log("Miss");
-                            SoundManager.Play(currentPitch);
+                            SoundManager.Play(currentPitch + 3);
                         }
                         // Pitch changed and hand move or pitch unchanged and hand not move, or miss previous note
                         else

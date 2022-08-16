@@ -21,7 +21,7 @@ public class StarePlayer : MonoBehaviour
     {
         LookTargetController.lookAtPlayerRatio = 1;
 
-        NoteLane.transform.localPosition = NoteLane.transform.localPosition - new Vector3(0f, -10f, 15f);
+        NoteLane.transform.localPosition = NoteLane.transform.localPosition - new Vector3(0f, -100f, 15f);
         gameLevel = GameManager.CurrentGameLevel;
         GameManager.CurrentGameLevel = GameManager.GameLevel.None;
     }
