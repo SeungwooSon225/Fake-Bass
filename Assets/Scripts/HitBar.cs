@@ -11,6 +11,7 @@ public class HitBar : MonoBehaviour
     public GuitarInteractionManager GuitarInteractionManager;
     public SoundManager SoundManager;
     public Animator GuitaristAnimator;
+    public RPCManager RPCManager;
 
     public ParticleSystem RippleEffect;
 
@@ -59,6 +60,7 @@ public class HitBar : MonoBehaviour
                 case GameManager.GameLevel.None:
                     Debug.Log("Good");
                     SoundManager.Play(currentPitch);
+                    RPCManager.MakeSound(currentPitch);
 
                     if (currentNote != null)
                     {
@@ -70,6 +72,7 @@ public class HitBar : MonoBehaviour
                         if (VideoManager.Video.isPaused)
                         {
                             VideoManager.Video.Play();
+
                             GuitaristAnimator.speed = animationSpeed;
                         }
                     }

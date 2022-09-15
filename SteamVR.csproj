@@ -97,6 +97,7 @@
     <Compile Include="Assets\AssetStore\VR\SteamVR\InteractionSystem\Samples\Scripts\TargetHitEffect.cs" />
     <Compile Include="Assets\AssetStore\VR\SteamVR\Input\SteamVR_ActionDirections.cs" />
     <Compile Include="Assets\AssetStore\VR\SteamVR\InteractionSystem\Core\Scripts\Unparent.cs" />
+    <Compile Include="Assets\AssetStore\VR\SteamVR\OpenVRUnityXRPackage\Editor\OpenVRSimpleJSON.cs" />
     <Compile Include="Assets\AssetStore\VR\SteamVR\InteractionSystem\Core\Scripts\DestroyOnDetachedFromHand.cs" />
     <Compile Include="Assets\AssetStore\VR\SteamVR\InteractionSystem\Core\Scripts\HapticRack.cs" />
     <Compile Include="Assets\AssetStore\VR\SteamVR\Input\BehaviourUnityEvents\SteamVR_Behaviour_Skeleton_TrackingChangedEvent.cs" />
@@ -190,6 +191,7 @@
     <Compile Include="Assets\AssetStore\VR\SteamVR\Extras\SteamVR_LaserPointer.cs" />
     <Compile Include="Assets\AssetStore\VR\SteamVR\InteractionSystem\Core\Scripts\HandCollider.cs" />
     <Compile Include="Assets\AssetStore\VR\SteamVR\Input\SteamVR_Input.cs" />
+    <Compile Include="Assets\AssetStore\VR\SteamVR\OpenVRUnityXRPackage\Editor\OpenVRPackageInstaller.cs" />
     <Compile Include="Assets\AssetStore\VR\SteamVR\Input\SteamVR_Behaviour_Vector2.cs" />
     <Compile Include="Assets\AssetStore\VR\SteamVR\Input\BehaviourUnityEvents\SteamVR_Behaviour_Vector2Event.cs" />
     <Compile Include="Assets\AssetStore\VR\SteamVR\InteractionSystem\Longbow\Scripts\BalloonColliders.cs" />
@@ -487,6 +489,9 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="Photon3Unity3D">
+      <HintPath>Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll</HintPath>
+    </Reference>
     <Reference Include="log4netPlastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.4\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
     </Reference>
@@ -502,6 +507,9 @@
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.4\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
+    </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.4\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
@@ -513,12 +521,6 @@
     </Reference>
     <Reference Include="ICSharpCode.NRefactory">
       <HintPath>Library\PackageCache\com.unity.render-pipelines.core@10.7.0\Editor\ShaderGenerator\ICSharpCode.NRefactory.dll</HintPath>
-    </Reference>
-    <Reference Include="Photon3Unity3D">
-      <HintPath>Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll</HintPath>
-    </Reference>
-    <Reference Include="websocket-sharp">
-      <HintPath>Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>

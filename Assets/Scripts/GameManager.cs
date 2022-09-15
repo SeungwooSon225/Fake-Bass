@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public MusicDataReader MusicDataReader;
     public HitBar HitBar;
     public VRControllerInputManager VRControllerInputManager;
+    public RPCManager RPCManager;
 
     public GameMode CurrentGameMode;
     public GameLevel CurrentGameLevel;
@@ -22,7 +23,9 @@ public class GameManager : MonoBehaviour
     private int isGuitarPlayingHash;
 
     private static GameManager _instance;
-    
+
+    public Components ready;
+
     [SerializeField]
     private VideoManager videoManager;
 
@@ -150,12 +153,19 @@ public class GameManager : MonoBehaviour
             // 키보드 입력이 있으면 플레이 시작
             if (Input.anyKeyDown || VRControllerInputManager.RightPressed())
             {
+                RPCManager.StartMusic();
+            }
+
+            if (ready.myStart && ready.otherStart)
+            {
                 // TO do
                 // 상대방 입력 대기
 
                 ///////////////////////
                 ///
                 isKeyDown = true;
+                ready.myStart = false;
+                ready.otherStart = false;
 
                 videoManager.Video.Play();
                 IsGamePlaying = true;

@@ -6,5 +6,4 @@ public class Components : MonoBehaviour
 {
     public bool myStart = false;
     public bool otherStart = false;
-
 }

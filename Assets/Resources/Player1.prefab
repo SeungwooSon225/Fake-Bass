@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2946840766206427945}
   - component: {fileID: 9127156726334348558}
   - component: {fileID: 5827300138337533216}
-  - component: {fileID: 674985710921293729}
   - component: {fileID: 1652488547307130581}
+  - component: {fileID: 4048134351483471884}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -97,26 +97,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &674985710921293729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4366161101484604270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 062571b8642e0b54a83b17a3b4b7440c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  head: {fileID: 0}
-  lefthand: {fileID: 0}
-  righthand: {fileID: 0}
-  componentManager: {fileID: 0}
-  component: {fileID: 0}
-  Grab:
-    actionPath: 
-    needsReinit: 0
 --- !u!114 &1652488547307130581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,3 +119,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &4048134351483471884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4366161101484604270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f898f6aed04e348af49f130869379a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  readyManager: {fileID: 0}
+  ready: {fileID: 0}
+  VRControllerInputManager: {fileID: 0}
