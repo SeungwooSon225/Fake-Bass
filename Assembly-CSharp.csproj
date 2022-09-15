@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B7235296-FBA4-3607-6C2B-F38FF0BEA998}</ProjectGuid>
+    <ProjectGuid>{F60EB01A-B0AB-F5D1-B079-11E9B85CE475}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -56,11 +56,9 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\FluidSynth\fluid_rev_v1.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\NoteOnEvent.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeDemos\Script\ExtendedFlycam.cs" />
-    <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
     <Compile Include="Assets\AssetStore\RealisticEyeMovements\Scripts\Internal\HeadComponent.cs" />
     <Compile Include="Assets\Scripts\NoteInfo.cs" />
     <Compile Include="Assets\Scripts\NodToTempo.cs" />
@@ -68,8 +66,6 @@
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeDemos\SourceCatchMusic\Script\Collide.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\Water\Water\Scripts\Displace.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\MidiEventComparer.cs" />
-    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
-    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\AppSettingsExtensions.cs" />
     <Compile Include="Assets\Scripts\Note.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKSoundFont\SFFile.cs" />
     <Compile Include="Assets\Scripts\MusicAnalyzing\MusicDataReader.cs" />
@@ -86,9 +82,7 @@
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\FluidSynth\fluid_channel.cs" />
     <Compile Include="Assets\AssetStore\RealisticEyeMovements\Demo assets\DemoController.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeDemos\Script\GUISelectSoundFont.cs" />
-    <Compile Include="Assets\Scripts\Network\NetworkPlayer.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\FluidSynth\fluid_midi.cs" />
-    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChannelSelector.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\NoteEvent.cs" />
     <Compile Include="Assets\Scripts\NoteManager.cs" />
     <Compile Include="Assets\AssetStore\RealisticEyeMovements\Scripts\Legacy\EyeAndHeadAnimatorForExport.cs" />
@@ -101,7 +95,6 @@
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\TimeSignatureEvent.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeDemos\Script\CreateSample.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKUtil\Routine.cs" />
-    <Compile Include="Assets\Photon\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\ChannelAfterTouchEvent.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKGameObject\MidiPlayerGlobal.cs" />
     <Compile Include="Assets\Scripts\GuitarInteractionManager.cs" />
@@ -137,15 +130,11 @@
     <Compile Include="Assets\AssetStore\RealisticEyeMovements\Scripts\Internal\EyelidPositionBlendshape.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\FluidSynth\fluid_global.cs" />
     <Compile Include="Assets\Scripts\NotePoolManager.cs" />
-    <Compile Include="Assets\Scripts\Network\NetworkPlayerSpawner.cs" />
-    <Compile Include="Assets\Scripts\Network\NetworkManager.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\FluidSynth\fluid_voice.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeDemos\Script\MainMenu.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeDemos\Script\ExternalComponents\iTween.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKSoundFont\HiSample.cs" />
-    <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
     <Compile Include="Assets\Scripts\ParticleRippleScript.cs" />
-    <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextButtonTransition.cs" />
     <Compile Include="Assets\AssetStore\RealisticEyeMovements\Scripts\Internal\DestroyNotifier.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeMVP\TheSimplestMidiPlayer.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\FluidSynth\fluid_rev_v2.cs" />
@@ -160,7 +149,6 @@
     <Compile Include="Assets\Scripts\StarePlayer.cs" />
     <Compile Include="Assets\AssetStore\RealisticEyeMovements\Scripts\Internal\ControlDataForSerialization.cs" />
     <Compile Include="Assets\Scripts\HitBar.cs" />
-    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\NamePickGui.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKUtil\BuilderInfo.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\TrackSequenceNumberEvent.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKUtil\PopupListItem.cs" />
@@ -189,7 +177,6 @@
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeDemos\Script\TestMidiFilePlayerMulti\LookPoint.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\MidiMessage.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeDemos\SourceCatchMusic\Script\MusicView.cs" />
-    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeDemos\Script\FlyCamera.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\ByteEncoding.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeDemos\Script\TestMidiFilePlayerMulti\LookTarget.cs" />
@@ -206,7 +193,6 @@
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeDemos\Script\HelperDemo.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\FluidSynth\fluid_env_data.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKSoundFont\ImBank.cs" />
-    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\FriendItem.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKUtil\HelperNote.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKGameObject\MidiStreamPlayer.cs" />
     <Compile Include="Assets\AssetStore\RealisticEyeMovements\Scripts\Internal\VeryLateUpdateCallback.cs" />
@@ -214,25 +200,39 @@
     <Compile Include="Assets\AssetStore\RealisticEyeMovements\Scripts\EyeAndHeadAnimator.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKMidi\TrackMidiEvent.cs" />
     <Compile Include="Assets\roopsound.cs" />
-    <Compile Include="Assets\Scripts\Network\Components.cs" />
     <Compile Include="Assets\Scripts\SynchronizeTempo.cs" />
-    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatGui.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\PitchWheelChangeEvent.cs" />
-    <Compile Include="Assets\Scripts\Network\Util.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\SequencerSpecificEvent.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKGameObject\MPTKEvent.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\MidiEvent.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\TextEvent.cs" />
-    <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextToggleIsOnTransition.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKSoundFont\HiGen.cs" />
     <Compile Include="Assets\AssetStore\RealisticEyeMovements\Scripts\Internal\SerializableQuaternion.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\Water\Water\Scripts\Water.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\RawMetaEvent.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeDemos\Script\TestMidiSpatialization.cs" />
-    <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKGameObject\MidiSynth.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKSoundFont\HiMod.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeMVP\TheSimplestMidiLoader.cs" />
+    <Compile Include="Assets\Scripts\Network\Components.cs" />
+    <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
+    <Compile Include="Assets\Scripts\Network\NetworkManager.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\NamePickGui.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatGui.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
+    <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextButtonTransition.cs" />
+    <Compile Include="Assets\Scripts\Network\Util.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
+    <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextToggleIsOnTransition.cs" />
+    <Compile Include="Assets\Scripts\Network\NetworkPlayer.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\FriendItem.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChannelSelector.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
+    <Compile Include="Assets\Scripts\Network\NetworkPlayerSpawner.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\AppSettingsExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
@@ -500,23 +500,23 @@
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
-    <Reference Include="Photon3Unity3D">
-      <HintPath>Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll</HintPath>
-    </Reference>
     <Reference Include="Valve.Newtonsoft.Json">
       <HintPath>Assets\AssetStore\VR\SteamVR\Input\Plugins\JSON.NET\Valve.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="websocket-sharp">
-      <HintPath>Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Burst.Unsafe">
       <HintPath>Library\PackageCache\com.unity.burst@1.3.4\Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="Melanchall.DryWetMidi">
       <HintPath>Assets\AssetStore\Melanchall\DryWetMIDI\Melanchall.DryWetMidi.dll</HintPath>
+    </Reference>
+    <Reference Include="Photon3Unity3D">
+      <HintPath>Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll</HintPath>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
@@ -968,11 +968,11 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.XR.LegacyInputHelpers">
-      <HintPath>Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.XR.LegacyInputHelpers">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.OpenXR">
       <HintPath>Library\ScriptAssemblies\Unity.XR.OpenXR.dll</HintPath>
@@ -991,69 +991,69 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="PhotonChat.csproj">
-      <Project>{5FBC70AC-3CE8-7EDF-F58B-6273C78A4A3F}</Project>
-      <Name>PhotonChat</Name>
-    </ProjectReference>
     <ProjectReference Include="SteamVR_Input_Editor.csproj">
-      <Project>{9F9B268E-9E3C-869D-ED89-81CA2F6889ED}</Project>
+      <Project>{92AB1811-A996-883A-D852-44923ED9ABED}</Project>
       <Name>SteamVR_Input_Editor</Name>
     </ProjectReference>
     <ProjectReference Include="SteamVR_Windows_EditorHelper.csproj">
-      <Project>{05E861FD-76E3-FEC6-1C5B-185B2EF3DE6B}</Project>
+      <Project>{D0EEE3D8-E562-451D-DF34-7982D6A6D17A}</Project>
       <Name>SteamVR_Windows_EditorHelper</Name>
     </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Editor.csproj">
-      <Project>{87F0F0D7-3BAE-5357-F955-62F6EEDF829B}</Project>
-      <Name>PhotonUnityNetworking.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj">
-      <Project>{FCE32B61-91A3-94AE-E0B3-BB5886CA1123}</Project>
-      <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PunDemos.DemoHubEditor.csproj">
-      <Project>{E51C0D70-6F1D-8680-A548-F4DBECD29B5A}</Project>
-      <Name>PunDemos.DemoHubEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.csproj">
-      <Project>{D86C9707-DDFA-8FAD-FCA7-2D08F76BC79F}</Project>
-      <Name>PhotonUnityNetworking</Name>
-    </ProjectReference>
     <ProjectReference Include="SteamVR_Editor.csproj">
-      <Project>{D929D725-74F7-83FD-FBBC-954BC3628AFD}</Project>
+      <Project>{39F6C664-7E2B-59FF-8C9B-BC018ED5737B}</Project>
       <Name>SteamVR_Editor</Name>
     </ProjectReference>
     <ProjectReference Include="SteamVR_Actions.csproj">
-      <Project>{D7849FB2-2258-22D5-3637-4C6D4920A19D}</Project>
+      <Project>{3FC2F40E-876D-42D8-867D-F01D8AB6AC21}</Project>
       <Name>SteamVR_Actions</Name>
     </ProjectReference>
+    <ProjectReference Include="SteamVR.csproj">
+      <Project>{B97980A2-1CC9-377D-C5AC-6200DC22BE57}</Project>
+      <Name>SteamVR</Name>
+    </ProjectReference>
+    <ProjectReference Include="SimpleJSON.csproj">
+      <Project>{09894BBD-9B8A-37AF-1C85-5CEC185D92F0}</Project>
+      <Name>SimpleJSON</Name>
+    </ProjectReference>
     <ProjectReference Include="PunDemos.DemoSlotcarEditor.csproj">
-      <Project>{B0511D87-F37C-AB47-496D-E453C528F478}</Project>
+      <Project>{0DCFBC2F-1250-B0D3-E64A-4D283D125763}</Project>
       <Name>PunDemos.DemoSlotcarEditor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.Culling.Editor.csproj">
-      <Project>{E8F8D2A0-662D-FD10-7A79-E6BD99341649}</Project>
+      <Project>{274F19E9-BD97-EAEF-0B9B-549376F7E04E}</Project>
       <Name>PhotonUnityNetworking.Utilities.Culling.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="SteamVR.csproj">
-      <Project>{E262744E-5F6E-7560-28D4-B9B17E630865}</Project>
-      <Name>SteamVR</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonRealtime.csproj">
-      <Project>{36A7FA3E-7574-83E1-A402-62B6062D1041}</Project>
-      <Name>PhotonRealtime</Name>
-    </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.csproj">
-      <Project>{7973BEAB-3B1F-14F2-222E-B071656BD448}</Project>
+      <Project>{5BC6238F-54F1-4999-F888-2E6123E92715}</Project>
       <Name>PhotonUnityNetworking.Utilities</Name>
     </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj">
+      <Project>{599ACC7B-8C12-15EF-034D-1EB5774E6BD7}</Project>
+      <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PunDemos.DemoHubEditor.csproj">
+      <Project>{4415380F-B877-E4E9-BFA8-00BBBC5B9FDE}</Project>
+      <Name>PunDemos.DemoHubEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonRealtime.csproj">
+      <Project>{E7C9A0A6-9C8E-F3DD-4FB1-FBF95A90B832}</Project>
+      <Name>PhotonRealtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.csproj">
+      <Project>{027CDB19-A797-A268-CF3B-4150FB7B41B1}</Project>
+      <Name>PhotonUnityNetworking</Name>
+    </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Demos.csproj">
-      <Project>{7A976F16-8248-D69B-C06E-4B6CA9D40443}</Project>
+      <Project>{8ECDDD93-5BFE-AA6C-7C30-982BA11CDB1D}</Project>
       <Name>PhotonUnityNetworking.Demos</Name>
     </ProjectReference>
-    <ProjectReference Include="SimpleJSON.csproj">
-      <Project>{B52F95CE-4778-E2C5-4935-F4A312C053BA}</Project>
-      <Name>SimpleJSON</Name>
+    <ProjectReference Include="PhotonChat.csproj">
+      <Project>{2781D182-EDB0-6A0D-2CD4-91B0444C4BF2}</Project>
+      <Name>PhotonChat</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.Editor.csproj">
+      <Project>{0589019D-CB73-9C53-2ACD-13488728D177}</Project>
+      <Name>PhotonUnityNetworking.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -25,8 +25,8 @@ public class NetworkPlayer : MonoBehaviour
     {
         //phtonView를 이용해서 prefab이 spawn by us or another player에 의해 이루어졌는지 파악이 가능하다. 
         photonView = GetComponent<PhotonView>();
-        componentManager = GameObject.Find("Component Saver");
-        component = componentManager.GetComponent<Components>();
+        //componentManager = GameObject.Find("Component Saver");
+        //component = componentManager.GetComponent<Components>();
 
     }
 

@@ -123,6 +123,7 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1.0f);
         Debug.Log("Round Setting...");
+
         /* To do
          * 게임 플레이를 할 음악을 고르는 단계가 추가될 예정
          */
@@ -149,6 +150,11 @@ public class GameManager : MonoBehaviour
             // 키보드 입력이 있으면 플레이 시작
             if (Input.anyKeyDown || VRControllerInputManager.RightPressed())
             {
+                // TO do
+                // 상대방 입력 대기
+
+                ///////////////////////
+                ///
                 isKeyDown = true;
 
                 videoManager.Video.Play();

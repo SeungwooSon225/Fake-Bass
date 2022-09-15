@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{D86C9707-DDFA-8FAD-FCA7-2D08F76BC79F}</ProjectGuid>
+    <ProjectGuid>{027CDB19-A797-A268-CF3B-4150FB7B41B1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>PhotonUnityNetworking</AssemblyName>
@@ -59,19 +59,19 @@
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Views\PhotonRigidbodyView.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\PunClasses.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonStreamQueue.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\ServerSettings.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonNetworkPart.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Enums.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonNetwork.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonView.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Utilities\NestedComponentUtilities.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Views\PhotonAnimatorView.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Interfaces\IPunCallbacks.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Views\PhotonRigidbody2DView.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Interfaces\IPhotonViewCallbacks.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Views\PhotonTransformViewClassic.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\CustomTypes.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Views\PhotonTransformView.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\ServerSettings.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonNetwork.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonView.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Utilities\NestedComponentUtilities.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Views\PhotonAnimatorView.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\CustomTypes.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonHandler.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -302,6 +302,9 @@
     </Reference>
     <Reference Include="UnityEditor.Graphs">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
@@ -693,7 +696,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="PhotonRealtime.csproj">
-      <Project>{36A7FA3E-7574-83E1-A402-62B6062D1041}</Project>
+      <Project>{E7C9A0A6-9C8E-F3DD-4FB1-FBF95A90B832}</Project>
       <Name>PhotonRealtime</Name>
     </ProjectReference>
   </ItemGroup>
