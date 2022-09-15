@@ -50,7 +50,8 @@ public class RPCManager : MonoBehaviour
 
     public void MakeSound(float pitch)
     {
-        photonView.RPC("Sound", RpcTarget.Others, pitch);
+        Debug.Log("RPC Make Sound");
+        photonView.RPC("Sound", RpcTarget.Others , pitch);
     }
 
 
@@ -72,6 +73,7 @@ public class RPCManager : MonoBehaviour
     [PunRPC]
     public void Sound(float pitch)
     {
+        Debug.Log("Sound Play!");
         soundManager.Play(pitch);
     }
 }

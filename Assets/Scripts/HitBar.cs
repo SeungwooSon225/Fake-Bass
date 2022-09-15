@@ -86,6 +86,7 @@ public class HitBar : MonoBehaviour
                         // Make wrong sound
                         Debug.Log("Miss");
                         SoundManager.Play(currentPitch + 3);
+                        RPCManager.MakeSound(currentPitch);
                     }
                     // Pitch changed and hand move or pitch unchanged and hand not move, or miss previous note
                     else
@@ -93,6 +94,7 @@ public class HitBar : MonoBehaviour
                         // Make proper sound
                         Debug.Log("Good");
                         SoundManager.Play(currentPitch);
+                        RPCManager.MakeSound(currentPitch);
                     }
 
                     isPitchChanged = false;
@@ -120,6 +122,7 @@ public class HitBar : MonoBehaviour
                     {
                         Debug.Log("Good");
                         SoundManager.Play(currentPitch);
+                        RPCManager.MakeSound(currentPitch);
 
                         NotePoolManager.SetNoteOnProperPosition(currentNote);
                         UpdateNoteInfo();
@@ -143,6 +146,7 @@ public class HitBar : MonoBehaviour
                             // Make wrong sound
                             Debug.Log("Miss");
                             SoundManager.Play(currentPitch + 3);
+                            RPCManager.MakeSound(currentPitch);
                         }
                         // Pitch changed and hand move or pitch unchanged and hand not move, or miss previous note
                         else
@@ -150,6 +154,7 @@ public class HitBar : MonoBehaviour
                             // Make proper sound
                             Debug.Log("Good");
                             SoundManager.Play(currentPitch);
+                            RPCManager.MakeSound(currentPitch);
                         }
 
                         NotePoolManager.SetNoteOnProperPosition(currentNote);
