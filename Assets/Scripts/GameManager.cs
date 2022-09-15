@@ -22,7 +22,10 @@ public class GameManager : MonoBehaviour
     private int isGuitarPlayingHash;
 
     private static GameManager _instance;
-    
+
+    public GameObject readyManager;
+    public Components ready;
+
     [SerializeField]
     private VideoManager videoManager;
 
@@ -82,6 +85,9 @@ public class GameManager : MonoBehaviour
         isGuitarPlayingHash = Animator.StringToHash("isGuitarPlaying");
 
         StartCoroutine(GameLoop());
+
+        readyManager = GameObject.Find("isReady");
+        ready = readyManager.GetComponent<Components>();
     }
 
 
@@ -147,9 +153,12 @@ public class GameManager : MonoBehaviour
         while (!isKeyDown)
         {
             // 키보드 입력이 있으면 플레이 시작
-            if (Input.anyKeyDown || VRControllerInputManager.RightPressed())
+            //if (Input.anyKeyDown || VRControllerInputManager.RightPressed())
+            if (ready.myStart && ready.otherStart)
             {
                 isKeyDown = true;
+                ready.myStart = false;
+                ready.otherStart = false;
 
                 videoManager.Video.Play();
                 IsGamePlaying = true;

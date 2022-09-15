@@ -887,6 +887,10 @@
       <Project>{E262744E-5F6E-7560-28D4-B9B17E630865}</Project>
       <Name>SteamVR</Name>
     </ProjectReference>
+    <ProjectReference Include="SimpleJSON.csproj">
+      <Project>{B52F95CE-4778-E2C5-4935-F4A312C053BA}</Project>
+      <Name>SimpleJSON</Name>
+    </ProjectReference>
     <ProjectReference Include="PhotonRealtime.csproj">
       <Project>{36A7FA3E-7574-83E1-A402-62B6062D1041}</Project>
       <Name>PhotonRealtime</Name>
@@ -898,10 +902,6 @@
     <ProjectReference Include="PhotonUnityNetworking.Demos.csproj">
       <Project>{7A976F16-8248-D69B-C06E-4B6CA9D40443}</Project>
       <Name>PhotonUnityNetworking.Demos</Name>
-    </ProjectReference>
-    <ProjectReference Include="SimpleJSON.csproj">
-      <Project>{B52F95CE-4778-E2C5-4935-F4A312C053BA}</Project>
-      <Name>SimpleJSON</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
