@@ -82,11 +82,11 @@
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\Editor\MenuShortcut.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\Editor\ToolsEditor.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\Editor\NoErrorValidation.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\Editor\ChatEditor.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\Editor\SelectMidiWindow.cs" />
     <Compile Include="Assets\Daz3D\Scripts\Editor\DetectRenderPipeline.cs" />
     <Compile Include="Assets\Daz3D\Scripts\Editor\Daz3DBridge.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\Editor\ScreenLoggerEditor\ScreenLoggerEditor.cs" />
-    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\Editor\ChatEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -317,6 +317,9 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="Photon3Unity3D">
+      <HintPath>Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll</HintPath>
+    </Reference>
     <Reference Include="log4netPlastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.4\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
     </Reference>
@@ -332,6 +335,9 @@
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.4\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
+    </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.4\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
@@ -343,12 +349,6 @@
     </Reference>
     <Reference Include="ICSharpCode.NRefactory">
       <HintPath>Library\PackageCache\com.unity.render-pipelines.core@10.7.0\Editor\ShaderGenerator\ICSharpCode.NRefactory.dll</HintPath>
-    </Reference>
-    <Reference Include="Photon3Unity3D">
-      <HintPath>Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll</HintPath>
-    </Reference>
-    <Reference Include="websocket-sharp">
-      <HintPath>Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
@@ -812,11 +812,11 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
       <HintPath>Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.OpenXR">
       <HintPath>Library\ScriptAssemblies\Unity.XR.OpenXR.dll</HintPath>
@@ -839,6 +839,10 @@
       <Project>{B7235296-FBA4-3607-6C2B-F38FF0BEA998}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
+    <ProjectReference Include="PhotonChat.csproj">
+      <Project>{5FBC70AC-3CE8-7EDF-F58B-6273C78A4A3F}</Project>
+      <Name>PhotonChat</Name>
+    </ProjectReference>
     <ProjectReference Include="SteamVR_Input_Editor.csproj">
       <Project>{9F9B268E-9E3C-869D-ED89-81CA2F6889ED}</Project>
       <Name>SteamVR_Input_Editor</Name>
@@ -846,6 +850,22 @@
     <ProjectReference Include="SteamVR_Windows_EditorHelper.csproj">
       <Project>{05E861FD-76E3-FEC6-1C5B-185B2EF3DE6B}</Project>
       <Name>SteamVR_Windows_EditorHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.Editor.csproj">
+      <Project>{87F0F0D7-3BAE-5357-F955-62F6EEDF829B}</Project>
+      <Name>PhotonUnityNetworking.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj">
+      <Project>{FCE32B61-91A3-94AE-E0B3-BB5886CA1123}</Project>
+      <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PunDemos.DemoHubEditor.csproj">
+      <Project>{E51C0D70-6F1D-8680-A548-F4DBECD29B5A}</Project>
+      <Name>PunDemos.DemoHubEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.csproj">
+      <Project>{D86C9707-DDFA-8FAD-FCA7-2D08F76BC79F}</Project>
+      <Name>PhotonUnityNetworking</Name>
     </ProjectReference>
     <ProjectReference Include="SteamVR_Editor.csproj">
       <Project>{D929D725-74F7-83FD-FBBC-954BC3628AFD}</Project>
@@ -855,18 +875,6 @@
       <Project>{D7849FB2-2258-22D5-3637-4C6D4920A19D}</Project>
       <Name>SteamVR_Actions</Name>
     </ProjectReference>
-    <ProjectReference Include="SteamVR.csproj">
-      <Project>{E262744E-5F6E-7560-28D4-B9B17E630865}</Project>
-      <Name>SteamVR</Name>
-    </ProjectReference>
-    <ProjectReference Include="SimpleJSON.csproj">
-      <Project>{B52F95CE-4778-E2C5-4935-F4A312C053BA}</Project>
-      <Name>SimpleJSON</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.csproj">
-      <Project>{D86C9707-DDFA-8FAD-FCA7-2D08F76BC79F}</Project>
-      <Name>PhotonUnityNetworking</Name>
-    </ProjectReference>
     <ProjectReference Include="PunDemos.DemoSlotcarEditor.csproj">
       <Project>{B0511D87-F37C-AB47-496D-E453C528F478}</Project>
       <Name>PunDemos.DemoSlotcarEditor</Name>
@@ -874,6 +882,14 @@
     <ProjectReference Include="PhotonUnityNetworking.Utilities.Culling.Editor.csproj">
       <Project>{E8F8D2A0-662D-FD10-7A79-E6BD99341649}</Project>
       <Name>PhotonUnityNetworking.Utilities.Culling.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="SteamVR.csproj">
+      <Project>{E262744E-5F6E-7560-28D4-B9B17E630865}</Project>
+      <Name>SteamVR</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonRealtime.csproj">
+      <Project>{36A7FA3E-7574-83E1-A402-62B6062D1041}</Project>
+      <Name>PhotonRealtime</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.csproj">
       <Project>{7973BEAB-3B1F-14F2-222E-B071656BD448}</Project>
@@ -883,25 +899,9 @@
       <Project>{7A976F16-8248-D69B-C06E-4B6CA9D40443}</Project>
       <Name>PhotonUnityNetworking.Demos</Name>
     </ProjectReference>
-    <ProjectReference Include="PhotonChat.csproj">
-      <Project>{5FBC70AC-3CE8-7EDF-F58B-6273C78A4A3F}</Project>
-      <Name>PhotonChat</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj">
-      <Project>{FCE32B61-91A3-94AE-E0B3-BB5886CA1123}</Project>
-      <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Editor.csproj">
-      <Project>{87F0F0D7-3BAE-5357-F955-62F6EEDF829B}</Project>
-      <Name>PhotonUnityNetworking.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PunDemos.DemoHubEditor.csproj">
-      <Project>{E51C0D70-6F1D-8680-A548-F4DBECD29B5A}</Project>
-      <Name>PunDemos.DemoHubEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonRealtime.csproj">
-      <Project>{36A7FA3E-7574-83E1-A402-62B6062D1041}</Project>
-      <Name>PhotonRealtime</Name>
+    <ProjectReference Include="SimpleJSON.csproj">
+      <Project>{B52F95CE-4778-E2C5-4935-F4A312C053BA}</Project>
+      <Name>SimpleJSON</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
