@@ -8,7 +8,6 @@ public class SoundManager : MonoBehaviour
     public Queue<GameObject> SoundSourcePool = new Queue<GameObject>();
     public AudioSource SnareSound;
     public AudioSource CymbalSound;
-    public RPCManager RPCManager;
 
     [SerializeField]
     private float bassPitch = 25;
@@ -64,8 +63,6 @@ public class SoundManager : MonoBehaviour
 
     public void GenerateDrumSound(string drum)
     {
-        if (RPCManager != null) RPCManager.MakeDrumSound(drum);
-
         switch (drum)
         {
             case "Snare":

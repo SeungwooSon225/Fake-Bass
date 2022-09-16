@@ -5,6 +5,7 @@ using UnityEngine;
 public class DrumSoundGenerator : MonoBehaviour
 {
     public SoundManager SoundManager;
+    public RPCManager RPCManager;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class DrumSoundGenerator : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if(RPCManager != null) RPCManager.MakeDrumSound(other.tag);
         SoundManager.GenerateDrumSound(other.tag);
     }
 }

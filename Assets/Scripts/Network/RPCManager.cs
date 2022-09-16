@@ -29,8 +29,14 @@ public class RPCManager : MonoBehaviour
             GameObject hitbar = GameObject.Find("HitBar");
             if (hitbar != null) hitbar.GetComponent<HitBar>().RPCManager = this;
 
-            GameObject soundManager = GameObject.Find("SoundManager");
-            if (soundManager != null) soundManager.GetComponent<SoundManager>().RPCManager = this;
+            GameObject[] drumSticks = GameObject.FindGameObjectsWithTag("DrumStick");
+            if (drumSticks != null)
+            {
+                foreach (GameObject drumStick in drumSticks)
+                { 
+                    drumStick.GetComponent<DrumSoundGenerator>().RPCManager = this;
+                }
+            }
         }
     }
 
