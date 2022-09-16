@@ -28,6 +28,9 @@ public class RPCManager : MonoBehaviour
 
             GameObject hitbar = GameObject.Find("HitBar");
             if (hitbar != null) hitbar.GetComponent<HitBar>().RPCManager = this;
+
+            GameObject soundManager = GameObject.Find("SoundManager");
+            if (soundManager != null) soundManager.GetComponent<SoundManager>().RPCManager = this;
         }
     }
 
@@ -55,6 +58,13 @@ public class RPCManager : MonoBehaviour
     }
 
 
+    public void MakeDrumSound(string drum)
+    {
+        Debug.Log("RPC Make Drum Sound");
+        photonView.RPC("DrumSound", RpcTarget.Others, drum);
+    }
+
+
     [PunRPC]
     public void ButtonPressed()
     {
@@ -75,5 +85,11 @@ public class RPCManager : MonoBehaviour
     {
         Debug.Log("Sound Play!");
         soundManager.Play(pitch);
+    }
+
+    [PunRPC]
+    public void DrumSound(string drum)
+    {
+        soundManager.GenerateDrumSound(drum);
     }
 }
