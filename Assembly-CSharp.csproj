@@ -137,6 +137,7 @@
     <Compile Include="Assets\AssetStore\RealisticEyeMovements\Scripts\Internal\EyelidPositionBlendshape.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\FluidSynth\fluid_global.cs" />
     <Compile Include="Assets\Scripts\NotePoolManager.cs" />
+    <Compile Include="Assets\Scripts\Drum\DrumSoundGenerator.cs" />
     <Compile Include="Assets\Scripts\Network\NetworkPlayerSpawner.cs" />
     <Compile Include="Assets\Scripts\Network\NetworkManager.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\FluidSynth\fluid_voice.cs" />
@@ -200,6 +201,7 @@
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\Water\Water\Scripts\WaterBase.cs" />
     <Compile Include="Assets\Scripts\NoteInfoQueueManager.cs" />
     <Compile Include="Assets\AssetStore\RealisticEyeMovements\Scripts\Internal\EyelidRotationLimiter.cs" />
+    <Compile Include="Assets\Scripts\Network\RPCManager.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\Water\Water\Scripts\MeshContainer.cs" />
     <Compile Include="Assets\Scripts\StareAgent.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\NAudio\PatchChangeEvent.cs" />
@@ -233,8 +235,6 @@
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKGameObject\MidiSynth.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Scripts\MPTKSoundFont\HiMod.cs" />
     <Compile Include="Assets\AssetStore\MidiPlayer\Demo\FreeMVP\TheSimplestMidiLoader.cs" />
-    <Compile Include="Assets\Scripts\Network\RPCManager.cs" />
-    <Compile Include="Assets\Scripts\Drum\DrumSoundGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />

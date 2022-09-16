@@ -8,6 +8,7 @@ public class SoundManager : MonoBehaviour
     public Queue<GameObject> SoundSourcePool = new Queue<GameObject>();
     public AudioSource SnareSound;
     public AudioSource CymbalSound;
+    public AudioSource KickSound;
 
     [SerializeField]
     private float bassPitch = 25;
@@ -71,6 +72,10 @@ public class SoundManager : MonoBehaviour
 
             case "Cymbal":
                 CymbalSound.Play();
+                break;
+                
+            case "Kick":
+                KickSound.Play();
                 break;
         }
     }

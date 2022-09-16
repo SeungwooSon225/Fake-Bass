@@ -11,6 +11,7 @@ TagManager:
   - DrumStick
   - Snare
   - Cymbal
+  - Kick
   layers:
   - Default
   - TransparentFX
