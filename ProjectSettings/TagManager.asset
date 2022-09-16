@@ -8,6 +8,9 @@ TagManager:
   - FxTemporaire
   - Guitarist
   - Note
+  - DrumStick
+  - Snare
+  - Cymbal
   layers:
   - Default
   - TransparentFX

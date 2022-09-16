@@ -26,8 +26,8 @@ public class RPCManager : MonoBehaviour
             GameManager gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
             gameManager.RPCManager = this;
 
-            HitBar hitbar = GameObject.Find("HitBar").GetComponent<HitBar>();
-            hitbar.RPCManager = this;
+            GameObject hitbar = GameObject.Find("HitBar");
+            if (hitbar != null) hitbar.GetComponent<HitBar>().RPCManager = this;
         }
     }
 

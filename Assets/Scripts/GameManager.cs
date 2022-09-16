@@ -17,6 +17,10 @@ public class GameManager : MonoBehaviour
 
     public GameMode CurrentGameMode;
     public GameLevel CurrentGameLevel;
+    public Instrumnets CurrentInstrument;
+
+    public GameObject[] GameObjectsForBass;
+    public GameObject[] GameObjectsForDrum;
 
     public bool IsGameEnd = false;
     public bool IsGamePlaying = false;
@@ -43,6 +47,13 @@ public class GameManager : MonoBehaviour
         Timing,
         Hand,
         Both
+    }
+
+
+    public enum Instrumnets
+    {
+        Bass,
+        Drum
     }
 
 
@@ -131,9 +142,42 @@ public class GameManager : MonoBehaviour
          * 게임 플레이를 할 음악을 고르는 단계가 추가될 예정
          */
 
-        NotePoolManager.MakeNoteQueue(MusicDataReader.AdjustedNoteInfoArray);
-        NotePoolManager.InitializeNotes();
-        HitBar.InitializeNoteInfo();
+        switch (CurrentInstrument)
+        {
+            case Instrumnets.Bass:
+                foreach (GameObject gameObjectForBass in GameObjectsForBass)
+                {
+                    gameObjectForBass.SetActive(true);
+                }
+
+                foreach (GameObject gameObjectForDrum in GameObjectsForDrum)
+                {
+                    gameObjectForDrum.SetActive(false);
+                }
+
+                NotePoolManager.MakeNoteQueue(MusicDataReader.AdjustedNoteInfoArray);
+                NotePoolManager.InitializeNotes();
+                HitBar.InitializeNoteInfo();
+                break;
+
+            case Instrumnets.Drum:
+                foreach (GameObject gameObjectForBass in GameObjectsForBass)
+                {
+                    gameObjectForBass.SetActive(false);
+                }
+
+                foreach (GameObject gameObjectForDrum in GameObjectsForDrum)
+                {
+                    gameObjectForDrum.SetActive(true);
+                }
+
+                break;
+
+            default:
+                break;
+        }
+
+
         Debug.Log("Round Setting Done");
 
         yield return new WaitForSeconds(0.5f); 

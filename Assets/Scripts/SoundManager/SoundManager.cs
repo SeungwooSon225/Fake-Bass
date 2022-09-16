@@ -6,7 +6,8 @@ public class SoundManager : MonoBehaviour
 {
     public GameObject SoundSource;
     public Queue<GameObject> SoundSourcePool = new Queue<GameObject>();
-
+    public AudioSource SnareSound;
+    public AudioSource CymbalSound;
 
     [SerializeField]
     private float bassPitch = 25;
@@ -58,5 +59,22 @@ public class SoundManager : MonoBehaviour
         {
             Play(30);
         }
+    }
+
+    public void GenerateDrumSound(string drum)
+    {
+        switch (drum)
+        {
+            case "Snare":
+                SnareSound.Play();
+                break;
+
+            case "Cymbal":
+                CymbalSound.Play();
+                break;
+
+
+        }
+
     }
 }
