@@ -72,6 +72,11 @@ public class RPCManager : MonoBehaviour
         photonView.RPC("DrumSound", RpcTarget.Others, drum);
     }
 
+    public void DeductScore(float scr)
+    {
+        Debug.Log("Score deducted");
+        photonView.RPC("MissScore", RpcTarget.All, scr);
+    }
 
     [PunRPC]
     public void ButtonPressed()
