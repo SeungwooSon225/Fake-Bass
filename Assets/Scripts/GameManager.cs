@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
     {
         get
         {
-            // ÀÎ½ºÅÏ½º°¡ ¾ø´Â °æ¿ì¿¡ Á¢±ÙÇÏ·Á ÇÏ¸é ÀÎ½ºÅÏ½º¸¦ ÇÒ´çÇØÁØ´Ù.
+            // ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ì¿¡ ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ ï¿½Ï¸ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ ï¿½Ò´ï¿½ï¿½ï¿½ï¿½Ø´ï¿½.
             if (!_instance)
             {
                 _instance = FindObjectOfType(typeof(GameManager)) as GameManager;
@@ -80,12 +80,12 @@ public class GameManager : MonoBehaviour
         {
             _instance = this;
         }
-        // ÀÎ½ºÅÏ½º°¡ Á¸ÀçÇÏ´Â °æ¿ì »õ·Î»ý±â´Â ÀÎ½ºÅÏ½º¸¦ »èÁ¦ÇÑ´Ù.
+        // ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
         else if (_instance != this)
         {
             Destroy(gameObject);
         }
-        // ¾ÀÀÌ ÀüÈ¯µÇ´õ¶óµµ ¼±¾ðµÇ¾ú´ø ÀÎ½ºÅÏ½º°¡ ÆÄ±«µÇÁö ¾Ê´Â´Ù.
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ç´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´Â´ï¿½.
         DontDestroyOnLoad(gameObject);
     }
 
@@ -108,21 +108,21 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator GameLoop()
     {
-        // RoundStarting ÄÚ·çÆ¾À» ÀÛµ¿½ÃÄÑ ÇÑ ¶ó¿îµå ÇÃ·¹ÀÌ¿¡ ÇÊ¿äÇÑ Á¤µµ ·Îµå, RoundStarting ÄÚ·çÆ¾ÀÌ ¿Ï·áµÈ ÈÄ return µÈ´Ù.
+        // RoundStarting ï¿½Ú·ï¿½Æ¾ï¿½ï¿½ ï¿½Ûµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½Ì¿ï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½, RoundStarting ï¿½Ú·ï¿½Æ¾ï¿½ï¿½ ï¿½Ï·ï¿½ï¿½ ï¿½ï¿½ return ï¿½È´ï¿½.
         yield return StartCoroutine(RoundSetting());
 
-        // RoundStarting ÄÚ·çÆ¾ÀÌ ¿Ï·áµÇ¸é RoundPlaying ÄÚ·çÆ¾À» ÀÛµ¿½ÃÄÑ °ÔÀÓ ÇÃ·¹ÀÌ, ÇÑ ¶ó¿îµå°¡ Á¾·áµÈ ÈÄ return µÈ´Ù.
+        // RoundStarting ï¿½Ú·ï¿½Æ¾ï¿½ï¿½ ï¿½Ï·ï¿½Ç¸ï¿½ RoundPlaying ï¿½Ú·ï¿½Æ¾ï¿½ï¿½ ï¿½Ûµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½ï¿½, ï¿½ï¿½ ï¿½ï¿½ï¿½å°¡ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ return ï¿½È´ï¿½.
         yield return StartCoroutine(RoundPlaying());
 
-        // RoundPlaying ÄÚ·çÆ¾ÀÌ ¿Ï·áµÇ¸é RoundEnding ÄÚ·çÆ¾À» ÀÛµ¿½ÃÄÑ ÇÑ ¶ó¿îµå¸¦ ³¡³½´Ù, ÇÊ¿äÇÑ ÀÛ¾÷À» ¸¶Ä£ ÈÄ return µÈ´Ù.
+        // RoundPlaying ï¿½Ú·ï¿½Æ¾ï¿½ï¿½ ï¿½Ï·ï¿½Ç¸ï¿½ RoundEnding ï¿½Ú·ï¿½Æ¾ï¿½ï¿½ ï¿½Ûµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½å¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½Ê¿ï¿½ï¿½ï¿½ ï¿½Û¾ï¿½ï¿½ï¿½ ï¿½ï¿½Ä£ ï¿½ï¿½ return ï¿½È´ï¿½.
         yield return StartCoroutine(RoundEnding());
 
-        // °ÔÀÓÀÌ ¿ÏÀüÈ÷ ³¡³µÀ¸¸é °ÔÀÓ Á¾·á
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         if (IsGameEnd)
         {
             Debug.Log("Game End");
         }
-        // °ÔÀÓÀÌ ¿ÏÀüÈ÷ ³¡³­°Ô ¾Æ´Ï¸é ´ÙÀ½ ¶ó¿îµå(°î) ½ÇÇà
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ´Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½
         else
         {
             StartCoroutine(GameLoop());
@@ -131,7 +131,7 @@ public class GameManager : MonoBehaviour
 
 
     /* 
-     * ÇÑ ¶ó¿îµå¸¦ ÇÃ·¹ÀÌ ÇÏ´Â µ¥ ÇÊ¿äÇÑ Á¤º¸¸¦ ·ÎµåÇÏ´Â ÄÚ·çÆ¾
+     * ï¿½ï¿½ ï¿½ï¿½ï¿½å¸¦ ï¿½Ã·ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½ï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½Ï´ï¿½ ï¿½Ú·ï¿½Æ¾
      */
     private IEnumerator RoundSetting()
     {
@@ -139,7 +139,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Round Setting...");
 
         /* To do
-         * °ÔÀÓ ÇÃ·¹ÀÌ¸¦ ÇÒ À½¾ÇÀ» °í¸£´Â ´Ü°è°¡ Ãß°¡µÉ ¿¹Á¤
+         * ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½Ì¸ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ü°è°¡ ï¿½ß°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
          */
 
         switch (CurrentInstrument)
@@ -185,7 +185,7 @@ public class GameManager : MonoBehaviour
 
 
     /* 
-    * ÇÑ ¶ó¿îµå¸¦ ÇÃ·¹ÀÌÇÏ´Â ÄÚ·çÆ¾
+    * ï¿½ï¿½ ï¿½ï¿½ï¿½å¸¦ ï¿½Ã·ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Ú·ï¿½Æ¾
     */
     private IEnumerator RoundPlaying()
     {
@@ -194,7 +194,7 @@ public class GameManager : MonoBehaviour
         bool isKeyDown = false;
         while (!isKeyDown)
         {
-            // Å°º¸µå ÀÔ·ÂÀÌ ÀÖÀ¸¸é ÇÃ·¹ÀÌ ½ÃÀÛ
+            // Å°ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             if (Input.anyKeyDown || VRControllerInputManager.RightPressed())
             {
                 RPCManager.StartMusic();
@@ -203,7 +203,7 @@ public class GameManager : MonoBehaviour
             if (ready.myStart)
             {
                 // TO do
-                // »ó´ë¹æ ÀÔ·Â ´ë±â
+                // ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ ï¿½ï¿½ï¿½
 
                 ///////////////////////
                 ///
@@ -215,25 +215,25 @@ public class GameManager : MonoBehaviour
                 IsGamePlaying = true;
 
                 /* =========================================
-                 * ÅÛÆ÷ Á¶Àý ÀÎÅÍ¾×¼Ç
+                 * ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Í¾×¼ï¿½
                  */
                 //MidiFilePlayer.MPTK_RePlay();
-                NodToTempo.isStart = true;
+                //NodToTempo.isStart = true;
                 ControlTempo.TargetTempo = MusicDataReader.MusicData.Tempo;
                 Debug.Log("C: "+ ControlTempo.TargetTempo);
-                NodToTempo.GlobalTempo = MusicDataReader.MusicData.Tempo;
+                //NodToTempo.GlobalTempo = MusicDataReader.MusicData.Tempo;
                 // =========================================
 
                 GuitaristAnimator.SetBool(isGuitarPlayingHash, true);
             }
 
-            // Å°º¸µå ÀÔ·ÂÀÌ ¾øÀ¸¸é ´ÙÀ½ ÇÁ·¹ÀÓ¿¡ ÀÌ À§Ä¡·Î ´Ù½Ã µ¹¾Æ¿Â´Ù.
+            // Å°ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ó¿ï¿½ ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½Æ¿Â´ï¿½.
             yield return null;
         }
 
         yield return new WaitForSeconds(1.0f);
 
-        // ºñµð¿À°¡ ³¡³ª¸é ´ÙÀ½ ´Ü°è·Î ³Ñ¾î°£´Ù.
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ü°ï¿½ï¿½ ï¿½Ñ¾î°£ï¿½ï¿½.
         while (videoManager.Video.time < videoManager.Video.length)
         //while(MidiFilePlayer.MPTK_IsPlaying)
         {
@@ -248,7 +248,7 @@ public class GameManager : MonoBehaviour
 
 
     /* 
-     * ÇÑ ¶ó¿îµå¸¦ ³¡³»´Â ÄÚ·çÆ¾
+     * ï¿½ï¿½ ï¿½ï¿½ï¿½å¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ú·ï¿½Æ¾
      */
     private IEnumerator RoundEnding()
     {
@@ -258,13 +258,13 @@ public class GameManager : MonoBehaviour
 
         while (!isKeyDown)
         {
-            // ESC¸¦ ´©¸£¸é °ÔÀÓ ¿ÏÀüÈ÷ Á¾·á
+            // ESCï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 isKeyDown = true;
                 IsGameEnd = true;
             }
-            // ESC¸¦ Á¦¿ÜÇÑ Å°¸¦ ´©¸£¸é ´ÙÀ½ ¶ó¿îµå ½ÃÀÛ
+            // ESCï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             else if (Input.anyKeyDown)
             {
                 isKeyDown = true;

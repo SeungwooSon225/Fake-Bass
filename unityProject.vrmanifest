@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.fakebass.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "D:\\Projects\\2022\\Fake-Bass\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "C:\\Users\\YECHAN_YANG\\Desktop\\석사 1학년 1학기\\1. 프로젝트\\3. ICT Challenge\\Fake-Bass-master\\Fake-Bass\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
           "name": "Fake Bass [Testing]"
