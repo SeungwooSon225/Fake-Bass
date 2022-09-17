@@ -6,10 +6,13 @@ using UnityEngine.UI;
 public class ZeroScore : MonoBehaviour
 {
     ScoreSystem allScore;
+
     [SerializeField]
     Slider slider;
     [SerializeField]
     GameObject fillArea;
+    [SerializeField]
+    private VideoManager videoManager;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +26,10 @@ public class ZeroScore : MonoBehaviour
     {
         slider.value = allScore.score;
         if (slider.value <= 0)
+        {
             fillArea.SetActive(false);
+            videoManager.Video.Pause();
+        }
         else
             fillArea.SetActive(true);
     }
