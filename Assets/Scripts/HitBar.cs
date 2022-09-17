@@ -147,7 +147,7 @@ public class HitBar : MonoBehaviour
                             Debug.Log("Miss");
                             SoundManager.Play(currentPitch + 3);
                             RPCManager.MakeSound(currentPitch);
-                            RPCManager.MissScore(3.0f);
+                            RPCManager.DeductScore(3.0f);
                         }
                         // Pitch changed and hand move or pitch unchanged and hand not move, or miss previous note
                         else
