@@ -11,6 +11,7 @@ public class RPCManager : MonoBehaviour
     public VRControllerInputManager VRControllerInputManager;
     private PhotonView photonView;
     private SoundManager soundManager;
+    private ScoreSystem allScore;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class RPCManager : MonoBehaviour
         photonView = GetComponent<PhotonView>();
         VRControllerInputManager = GameObject.Find("VRControllerInputManager").GetComponent<VRControllerInputManager>();
         soundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
+        allScore = GameObject.Find("GlobalScore").GetComponent<ScoreSystem>();
 
         if (photonView.IsMine)
         {
@@ -97,5 +99,11 @@ public class RPCManager : MonoBehaviour
     public void DrumSound(string drum)
     {
         soundManager.GenerateDrumSound(drum);
+    }
+
+    [PunRPC]
+    public void MissScore(float scr)
+    {
+        allScore.score -= scr;
     }
 }
