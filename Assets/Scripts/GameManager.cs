@@ -200,7 +200,7 @@ public class GameManager : MonoBehaviour
                 RPCManager.StartMusic();
             }
             // && ready.otherStart
-            if (ready.myStart && ready.otherStart)
+            if (ready.myStart)
             {
                 // TO do
                 // 상대방 입력 대기
