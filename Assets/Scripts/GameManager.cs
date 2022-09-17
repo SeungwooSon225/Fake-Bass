@@ -199,8 +199,8 @@ public class GameManager : MonoBehaviour
             {
                 RPCManager.StartMusic();
             }
-            // && ready.otherStart
-            if (ready.myStart)
+            // 
+            if (ready.myStart && ready.otherStart)
             {
                 // TO do
                 // 상대방 입력 대기
