@@ -16,7 +16,8 @@ public class MusicDataReader : MonoBehaviour
 
     private void Start()
     {
-        ReadMusicData("Cheap Trick - Surrender");
+        //ReadMusicData("Cheap Trick - Surrender");
+        ReadMusicData("IU-Blueming");
         AdjustNoteInfoArray();
     }
 
