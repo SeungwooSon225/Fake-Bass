@@ -264,6 +264,7 @@ MonoBehaviour:
   otherLeftHand: {fileID: 0}
   otherRightHand: {fileID: 0}
 =======
+>>>>>>> 481eaba175ba8270a591ff68462594bd5508fcac
 --- !u!114 &5916015481541572235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,7 +281,6 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
->>>>>>> 481eaba175ba8270a591ff68462594bd5508fcac
 --- !u!1 &6614003990653368825
 GameObject:
   m_ObjectHideFlags: 0
