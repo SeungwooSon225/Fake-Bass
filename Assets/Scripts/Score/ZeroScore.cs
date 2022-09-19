@@ -12,6 +12,8 @@ public class ZeroScore : MonoBehaviour
     [SerializeField]
     GameObject fillArea;
     [SerializeField]
+    GameObject text;
+    [SerializeField]
     private VideoManager videoManager;
 
     // Start is called before the first frame update
@@ -29,6 +31,7 @@ public class ZeroScore : MonoBehaviour
         {
             fillArea.SetActive(false);
             videoManager.Video.Pause();
+            text.SetActive(true);
         }
         else
             fillArea.SetActive(true);
