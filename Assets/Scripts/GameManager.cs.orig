@@ -201,15 +201,21 @@ public class GameManager : MonoBehaviour
             }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             // 
 =======
             // && ready.otherStart
 >>>>>>> 01d20f7e91d6dcdc9f70065028daaa06d8ad384e
 =======
+=======
+>>>>>>> 333e2ed2075339c66928d9cc9165f04f0d35841e
             // && ready.otherStart
 =======
             // 
 >>>>>>> 9c1bec3b1f194ee4eb5407abe68c130cffb8a4ab
+<<<<<<< HEAD
+>>>>>>> 333e2ed2075339c66928d9cc9165f04f0d35841e
+=======
 >>>>>>> 333e2ed2075339c66928d9cc9165f04f0d35841e
             if (ready.myStart && ready.otherStart)
             {

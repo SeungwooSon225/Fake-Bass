@@ -13,6 +13,14 @@ public class RPCManager : MonoBehaviour
     private SoundManager soundManager;
     private ScoreSystem allScore;
 
+    public Transform head;
+    public Transform lefthand;
+    public Transform righthand;
+
+    public Transform hmd;
+    public Transform leftController;
+    public Transform rightController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +30,10 @@ public class RPCManager : MonoBehaviour
         VRControllerInputManager = GameObject.Find("VRControllerInputManager").GetComponent<VRControllerInputManager>();
         soundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
         allScore = GameObject.Find("GlobalScore").GetComponent<ScoreSystem>();
+
+        hmd = GameObject.Find("Camera").GetComponent<Transform>();
+        leftController = GameObject.Find("Controller (left)").GetComponent<Transform>();
+        rightController = GameObject.Find("Controller (right)").GetComponent<Transform>();
 
         if (photonView.IsMine)
         {
@@ -39,19 +51,20 @@ public class RPCManager : MonoBehaviour
                     drumStick.GetComponent<DrumSoundGenerator>().RPCManager = this;
                 }
             }
+
+            
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (!photonView.IsMine) return;
-
-        //if (VRControllerInputManager.RightPressed())
-        //{
-        //    Debug.Log("Message");
-        //    photonView.RPC("ButtonPressed", RpcTarget.All);
-        //}
+        if (photonView.IsMine)
+        {
+            MapPosition(hmd, head);
+            MapPosition(leftController, lefthand);
+            MapPosition(rightController, righthand);
+        }
     }
 
     public void StartMusic()
@@ -110,5 +123,11 @@ public class RPCManager : MonoBehaviour
     public void MissScore(float scr)
     {
         allScore.score -= scr;
+    }
+
+    private void MapPosition(Transform from, Transform to)
+    {
+        to.transform.position = from.transform.position;
+        to.transform.rotation = from.transform.rotation;
     }
 }
