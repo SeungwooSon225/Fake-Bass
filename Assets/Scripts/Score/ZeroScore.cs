@@ -21,6 +21,7 @@ public class ZeroScore : MonoBehaviour
     {
         allScore = GameObject.Find("GlobalScore").GetComponent<ScoreSystem>();
         slider.value = allScore.score;
+        text.SetActive(false);
     }
 
     // Update is called once per frame
@@ -32,8 +33,13 @@ public class ZeroScore : MonoBehaviour
             fillArea.SetActive(false);
             videoManager.Video.Pause();
             text.SetActive(true);
+            Debug.Log("Game Over!");
         }
         else
+        {
             fillArea.SetActive(true);
+            text.SetActive(false);
+        }
+
     }
 }
