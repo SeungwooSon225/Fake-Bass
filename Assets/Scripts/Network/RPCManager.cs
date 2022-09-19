@@ -11,6 +11,19 @@ public class RPCManager : MonoBehaviour
     public VRControllerInputManager VRControllerInputManager;
     private PhotonView photonView;
     private SoundManager soundManager;
+    private ScoreSystem allScore;
+
+    public Transform head;
+    public Transform lefthand;
+    public Transform righthand;
+
+    public Transform hmd;
+    public Transform leftController;
+    public Transform rightController;
+
+    public GameObject otherHead;
+    public GameObject otherLeftHand;
+    public GameObject otherRightHand;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +33,11 @@ public class RPCManager : MonoBehaviour
         photonView = GetComponent<PhotonView>();
         VRControllerInputManager = GameObject.Find("VRControllerInputManager").GetComponent<VRControllerInputManager>();
         soundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
+        allScore = GameObject.Find("GlobalScore").GetComponent<ScoreSystem>();
+
+        hmd = GameObject.Find("Camera").GetComponent<Transform>();
+        leftController = GameObject.Find("Controller (left)").GetComponent<Transform>();
+        rightController = GameObject.Find("Controller (right)").GetComponent<Transform>();
 
         if (photonView.IsMine)
         {
@@ -38,18 +56,30 @@ public class RPCManager : MonoBehaviour
                 }
             }
         }
+
+        if (!photonView.IsMine)
+        {
+            otherHead = GameObject.Find("OtherHead");
+            otherLeftHand = GameObject.Find("OtherLeftHand");
+            otherRightHand = GameObject.Find("OtherRightHand");
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (!photonView.IsMine) return;
-
-        //if (VRControllerInputManager.RightPressed())
-        //{
-        //    Debug.Log("Message");
-        //    photonView.RPC("ButtonPressed", RpcTarget.All);
-        //}
+        if (photonView.IsMine)
+        {
+            MapPosition(hmd, head);
+            MapPosition(leftController, lefthand);
+            MapPosition(rightController, righthand);
+        }
+        else
+        {
+            MapPosition(head, otherHead.transform);
+            MapPosition(lefthand, otherLeftHand.transform);
+            MapPosition(righthand, otherRightHand.transform);
+        }
     }
 
     public void StartMusic()
@@ -70,18 +100,23 @@ public class RPCManager : MonoBehaviour
         photonView.RPC("DrumSound", RpcTarget.Others, drum);
     }
 
+    public void DeductScore(float scr)
+    {
+        Debug.Log("Score deducted");
+        photonView.RPC("MissScore", RpcTarget.All, scr);
+    }
 
     [PunRPC]
     public void ButtonPressed()
     {
         if (photonView.IsMine)
         {
-            Debug.Log("ÁØºñµÇ¾ú½À´Ï´Ù.");
+            Debug.Log("ï¿½Øºï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
             ready.myStart = true;
         }
         else
         {
-            Debug.Log("»ó´ë¹æÀÌ ÁØºñµÇ¾ú½À´Ï´Ù.");
+            Debug.Log("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Øºï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
             ready.otherStart = true;
         }
     }
@@ -97,5 +132,17 @@ public class RPCManager : MonoBehaviour
     public void DrumSound(string drum)
     {
         soundManager.GenerateDrumSound(drum);
+    }
+
+    [PunRPC]
+    public void MissScore(float scr)
+    {
+        allScore.score -= scr;
+    }
+
+    private void MapPosition(Transform from, Transform to)
+    {
+        to.transform.position = from.transform.position;
+        to.transform.rotation = from.transform.rotation;
     }
 }
